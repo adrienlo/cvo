@@ -32,7 +32,7 @@ gulp.task('inject', () => {
 		.pipe(injectPartial('main', 'main'))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest(config.build.root))
-		.pipe(browserSync.stream());
+		.pipe(browser.stream());
 });
 
 gulp.task('scripts', () => {
