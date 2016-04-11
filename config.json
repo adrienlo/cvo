@@ -1,0 +1,39 @@
+{
+	"name": "cvo",
+	"server": {
+		"port": 8001
+	},
+	"build": {
+		"root": "./build/",
+		"styles": {
+			"path": "styles/"
+		},
+		"scripts": {
+			"path": "js/"
+		},
+		"images": {
+			"path": "/images/"
+		}
+	},
+	"source": {
+		"root": "./src/",
+		"images": "images/",
+		"partials": "partials/",
+		"scripts": {
+			"entry": "js/app.js",
+			"files": "js/**/*.js"
+		},
+		"styles": {
+			"entry": "sass/bootstrap.scss",
+			"files": [
+				"sass/**/*.scss"
+			],
+			"supported": {
+				"browsers": [
+					"not ie < 10",
+					"last 5 versions"
+				]
+			}
+		}
+	}
+}
