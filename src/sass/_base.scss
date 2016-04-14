@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	background: #000;
+	color: #fff;
+	font-family: $font-sans-serif;
+	font-size: 12px;
+}
+
+main {
+	position: relative;
+	z-index: $index-main;
+}
+
+svg {
+	> def,
+	text {
+		display: none;
+	}
+}

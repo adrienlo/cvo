@@ -39,16 +39,33 @@ function injectPartial(token, fileName) {
 gulp.task('generate-html', () => {
 	const files = fs.readdirSync(config.source.root);
 
+	// files.forEach(file => {
+	// 	if (path.extname(file) === '.html') {
+	// 		gulp.src(config.source.root + file)
+	// 			.pipe(inject(gulp.src(`${config.source.root + config.source.partials}navigation.html`), {
+	// 				removeTags: true,
+	// 				starttag: '<!-- inject:navigation:{{ext}} -->',
+	// 				transform: (filePath, file) => {
+	// 					return file.contents.toString('utf8');
+	// 				}
+	// 			}))
+	// 			.pipe(gulp.dest(config.build.root))
+	// 			.pipe(browser.stream());
+	// 	}
+	// });
+
 	files.forEach(file => {
 		if (path.extname(file) === '.html') {
-			gulp.src(config.source.root + file)
-				.pipe(inject(gulp.src(`${config.source.root + config.source.partials}navigation.html`), {
+			gulp.src(`${config.source.root + config.source.partials}master.html`)
+				.pipe(inject(gulp.src(config.source.root + file), {
 					removeTags: true,
-					starttag: '<!-- inject:navigation:{{ext}} -->',
+					starttag: '<!-- inject:main:{{ext}} -->',
 					transform: (filePath, file) => {
 						return file.contents.toString('utf8');
 					}
 				}))
+				.pipe(injectPartial('navigation', 'navigation'))
+				.pipe(rename(file))
 				.pipe(gulp.dest(config.build.root))
 				.pipe(browser.stream());
 		}
@@ -81,7 +98,13 @@ gulp.task('styles', () => {
 		.pipe(browser.stream());
 });
 
-gulp.task('serve', ['styles', 'scripts', 'inject'], () => {
+gulp.task('watch', () => {
+	gulp.watch(config.source.root + config.source.scripts.files, ['scripts']);
+	gulp.watch(config.source.root + config.source.styles.files, ['styles']);
+	gulp.watch([`${config.source.root}*.html`, `${config.source.root + config.source.partials}*.html`], ['generate-html'], browser.reload);
+});
+
+gulp.task('serve', () => {
 	browser.init({
 		open: true,
 		port: config.server.port || '8000',
@@ -89,12 +112,9 @@ gulp.task('serve', ['styles', 'scripts', 'inject'], () => {
 		ghostMode: false,
 		server: {
 			baseDir: config.build.root,
-		},
+		}
 	});
-
-	gulp.watch(config.source.root + config.source.scripts.files, ['scripts']);
-	gulp.watch(config.source.root + config.source.styles.files, ['styles']);
-	gulp.watch([`${config.source.root}*.html`, `${config.source.root + config.source.partials}*.html`], ['generate-html'], browser.reload);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('build', ['styles', 'scripts', 'generate-html']);
+gulp.task('default', ['build', 'serve', 'watch']);

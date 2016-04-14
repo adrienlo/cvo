@@ -1,0 +1,7 @@
+.image-blur {
+	filter: blur(45px);
+}
+
+.hide {
+	@include visuallyhidden();
+}

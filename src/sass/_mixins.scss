@@ -1,0 +1,19 @@
+@mixin clearfix {
+	zoom: 1;
+	&:before, &:after { content: ''; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin full-width {
+	height: auto;
+	vertical-align: top;
+	width: 100%;
+}
+
+@mixin visuallyhidden {
+	clip: rect(0 0 0 0);
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
+	overflow: hidden;
+	position: absolute;
+}
