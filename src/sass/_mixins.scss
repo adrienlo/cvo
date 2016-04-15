@@ -17,3 +17,20 @@
 	overflow: hidden;
 	position: absolute;
 }
+
+@mixin responsive-hidden() {
+	display: none !important;
+}
+
+@mixin responsive-visible() {
+	display: block !important;
+
+	table &  { display: table !important; }
+	tr &     { display: table-row !important; }
+	th &,
+	td &     { display: table-cell !important; }
+}
+
+@mixin responsive-visible-inline() {
+	display: inline-block !important;
+}

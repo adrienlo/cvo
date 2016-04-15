@@ -57,17 +57,13 @@ header {
 					display: block;
 				}
 
-				&:after,
 				&:before {
 					content: '';
-					display: block;
-				}
-
-				&:before {
 					top: -7px;
 				}
 
 				&:after {
+					content: '';
 					bottom: -7px;
 				}
 			}
@@ -92,4 +88,13 @@ header {
 		}
 	}
 
+	@media (min-width: $min-medium) {
+		$header-top-padding: 200px;
+
+		padding-top: $header-top-padding;
+
+		.menu-toggle {
+			top: $header-top-padding;
+		}
+	}
 }

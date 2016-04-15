@@ -23,3 +23,150 @@ $toggle-menu-radius: 7px;
 	font-weight: normal;
 	font-style: normal;
 }
+
+// Breakpoints
+
+$breakpoints-min: (
+	xsmall: 320px,
+	small: 500px,
+	medium: 740px,
+	large: 960px,
+	xlarge: 1200px
+);
+
+$breakpoints-max: (
+	xsmall: (map-get($breakpoints-min, small) - 1),
+	small: (map-get($breakpoints-min, medium) - 1),
+	medium: (map-get($breakpoints-min, large) - 1),
+	large: (map-get($breakpoints-min, xlarge) - 1)
+);
+
+@mixin mediaquery-min($media-breakpoint, $media-breakpoints: $breakpoints-min) {
+	@if map-has-key($media-breakpoints, $media-breakpoint) {
+		$media-breakpoint: map-get($media-breakpoints, $media-breakpoint);
+	}
+
+	@media screen and (min-width: #{$media-breakpoint}) {
+		@content;
+	}
+}
+
+@mixin mediaquery-max($media-breakpoint, $media-breakpoints: $breakpoints-max) {
+	@if map-has-key($media-breakpoints, $media-breakpoint) {
+		$media-breakpoint: map-get($media-breakpoints, $media-breakpoint);
+	}
+
+	@media screen and (max-width: #{$media-breakpoint}) {
+		@content;
+	}
+}
+
+$min-xsmall			: map-get($breakpoints-min, xsmall);
+$min-small			: map-get($breakpoints-min, small);
+$min-medium			: map-get($breakpoints-min, medium);
+$min-large			: map-get($breakpoints-min, large);
+$min-xlarge			: map-get($breakpoints-min, xlarge);
+
+$max-xsmall			: ($min-small - 1);
+$max-small			: ($min-medium - 1);
+$max-medium			: ($min-large - 1);
+$max-large			: ($min-xlarge - 1);
+
+.xs-screen,
+.sm-screen,
+.med-screen,
+.lg-screen,
+.xl-screen,
+.xs-screen-inline,
+.sm-screen-inline,
+.med-screen-inline,
+.lg-screen-inline,
+.xl-screen-inline, {
+	display: none !important;
+}
+
+.xs-screen {
+	@media (max-width: $max-xsmall) {
+		@include responsive-visible();
+	}
+}
+
+.sm-screen {
+	@media (min-width: $min-small) and (max-width: $max-small) {
+		@include responsive-visible();
+	}
+}
+
+.med-screen {
+	@media (min-width: $min-medium) and (max-width: $max-medium) {
+		@include responsive-visible();
+	}
+}
+
+.lg-screen {
+	@media (min-width: $min-large) and (max-width: $max-large) {
+		@include responsive-visible();
+	}
+}
+
+.xl-screen {
+	@media (min-width: $min-xlarge) {
+		@include responsive-visible();
+	}
+}
+
+.xs-screen-inline {
+	@media (max-width: $max-xsmall) {
+		@include responsive-visible-inline();
+	}
+}
+
+.sm-screen-inline {
+	@media (min-width: $min-small) and (max-width: $max-small) {
+		@include responsive-visible-inline();
+	}
+}
+
+.med-screen-inline {
+	@media (min-width: $min-medium) and (max-width: $max-medium) {
+		@include responsive-visible-inline();
+	}
+}
+
+.lg-screen-inline {
+	@media (min-width: $min-large) and (max-width: $max-large) {
+		@include responsive-visible-inline();
+	}
+}
+
+.xl-screen-inline {
+	@media (min-width: $min-xlarge) {
+		@include responsive-visible-inline();
+	}
+}
+
+.hidden-xs {
+	@media (max-width: $max-xsmall) {
+		@include responsive-hidden();
+	}
+}
+.hidden-sm {
+	@media (min-width: $min-small) and (max-width: $max-small) {
+		@include responsive-hidden();
+	}
+}
+.hidden-md {
+	@media (min-width: $min-medium) and (max-width: $max-medium) {
+		@include responsive-hidden();
+	}
+}
+.hidden-lg {
+	@media (min-width: $min-large) and (max-width: $max-large) {
+		@include responsive-hidden();
+	}
+}
+.hidden-xl {
+	@media (min-width: $min-xlarge) {
+		@include responsive-hidden();
+	}
+}
