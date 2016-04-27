@@ -1,5 +1,6 @@
 .work--types {
 	padding: 10px 60px;
+
 	ul {
 		@include list-inline();
 		display: flex;
@@ -49,6 +50,10 @@
 				}
 			}
 		}
+	}
+
+	@media (max-width: $max-small) {
+		@include visuallyhidden();
 	}
 }
 
