@@ -17,3 +17,15 @@ header {
 		}
 	}
 }
+
+#cvo--logo {
+	width: 50%;
+
+	img {
+		@include full-width();
+	}
+
+	@media (min-width: $min-medium) {
+		width: auto;
+	}
+}

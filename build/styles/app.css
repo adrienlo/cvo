@@ -588,6 +588,16 @@ header {
             -ms-flex-item-align: start;
                 align-self: flex-start; } }
 
+#cvo--logo {
+  width: 50%; }
+  #cvo--logo img {
+    height: auto;
+    vertical-align: top;
+    width: 100%; }
+  @media (min-width: 740px) {
+    #cvo--logo {
+      width: auto; } }
+
 .menu--toggle {
   position: absolute;
   right: 0;
