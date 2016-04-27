@@ -1,8 +1,9 @@
 footer {
-	margin: 200px 0;
+	padding: 200px 0;
 	text-align: center;
 
 	h4 {
+		letter-spacing: .07em;
 		text-transform: uppercase;
 	}
 
@@ -10,6 +11,7 @@ footer {
 		@include list-unstyled();
 
 		a {
+			letter-spacing: .07em;
 			text-transform: uppercase;
 			font-size: 30px;
 		}

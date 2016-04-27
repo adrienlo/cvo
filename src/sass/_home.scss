@@ -6,21 +6,22 @@ blockquote {
 }
 
 .collaborators {
-	padding: 100px 15% 200px;
 	background: $color-grey2;
+	padding: 100px 15% 200px;
 	text-align: center;
 
 	h3 {
-		text-transform: uppercase;
+		letter-spacing: .07em;
 		margin-bottom: 20px;
+		text-transform: uppercase;
 	}
 
 	ul {
 		@include list-unstyled();
+		align-items: center;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: center;
 		justify-content: center;
 
 		li {
@@ -30,25 +31,26 @@ blockquote {
 	}
 
 	.cta--work {
-		font-size: 30px;
 		color: $color-grey3;
-		text-align: center;
-		text-transform: uppercase;
-		text-decoration: none;
-		position: relative;
-		margin: 200px 0;
 		display: block;
+		font-size: 30px;
+		letter-spacing: .07em;
+		margin: 200px 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
 
 		&:before {
+			border-right: solid 2px $color-grey3;
+			border-top: solid 2px $color-grey3;
 			content: '';
 			display: block;
-			position: absolute;
-			top: -20px;
-			right: -60px;
-			border-top: solid 2px $color-grey3;
-			border-right: solid 2px $color-grey3;
-			width: 16px;
 			height: 16px;
+			position: absolute;
+			right: -60px;
+			top: -20px;
+			width: 16px;
 		}
 	}
 }

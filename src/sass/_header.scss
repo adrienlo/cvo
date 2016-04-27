@@ -2,18 +2,18 @@ header {
 	margin: 0 60px 75px;
 	position: relative;
 
-	#cvo-logo {
+	#cvo--logo {
 		margin-left: 0;
 		z-index: $index-logo;
 	}
 
 	@media (min-width: $min-medium) {
-		@include clearfix();
-		
+		display: flex;
+
 		padding-top: 115px;
 
-		#cvo-logo {
-			float: left;
+		#cvo--logo {
+			align-self: flex-start;
 		}
 	}
 }
