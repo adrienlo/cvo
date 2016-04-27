@@ -1,0 +1,6 @@
+.image--slide {
+	img,
+	picture {
+		@include full-width();
+	}
+}

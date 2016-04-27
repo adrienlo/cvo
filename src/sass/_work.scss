@@ -1,0 +1,38 @@
+.work--set {
+	.work--slides--container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+
+	.image--slide {
+		flex: 1 0 100%;
+	}
+
+	.work--description {
+		background: white;
+		font-size: 16px;
+		padding: 30px 30px 160px;
+	}
+}
+
+.noteworty--collaborators {
+	background: $brand-color;
+	color: white;
+	text-align: left;
+
+	h3 {
+		color: white;
+	}
+
+	ul {
+		@include list-unstyled();
+		display: block;
+		font-size: 50px;
+
+		li {
+			width: auto;
+		}
+	}
+}

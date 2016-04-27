@@ -3,14 +3,42 @@
 	padding: 0;
 }
 
-html, body {
+body {
 	background: #fff;
-	color: #000;
+	color: $color-grey3;
 	font-family: $font-sans-serif;
 	font-size: 12px;
+	position: relative;
+	// overflow-x: hidden;
+
+	&:after,
+	&:before {
+		background: $brand-color;
+		content: '';
+		display: block;
+		height: 44px;
+		position: absolute;
+		width: 44px;
+	}
+
+	&:before {
+		left: 0;
+		top: 0;
+	}
+
+	&:after {
+		right: 0;
+		bottom: 0;
+	}
+
+	.menu--open {
+		overflow: hidden;
+	}
 }
 
 main {
+	@include clearfix();
+
 	position: relative;
 	z-index: $index-main;
 }
@@ -27,4 +55,16 @@ button {
 	border: none;
 	cursor: pointer;
 	outline: 0;
+}
+
+.brand--message {
+	width: 100%;
+	text-align: center;
+	padding: 115px 0;
+	color: $color-grey1;
+	text-transform: uppercase;
+
+	@media (min-width: $min-medium) {
+		@include visuallyhidden();
+	}
 }

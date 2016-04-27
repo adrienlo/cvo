@@ -34,3 +34,20 @@
 @mixin responsive-visible-inline() {
 	display: inline-block !important;
 }
+
+
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+@mixin list-inline {
+	@include list-unstyled();
+	margin-left: -5px;
+
+	> li {
+		display: inline-block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

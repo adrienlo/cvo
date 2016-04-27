@@ -1,0 +1,23 @@
+footer {
+	margin: 200px 0;
+	text-align: center;
+
+	h4 {
+		text-transform: uppercase;
+	}
+
+	.contact--links {
+		@include list-unstyled();
+
+		a {
+			text-transform: uppercase;
+			font-size: 30px;
+		}
+
+		li {
+			display: block;
+			margin: 120px 0;
+		}
+	}
+
+}

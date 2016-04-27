@@ -1,4 +1,7 @@
 $brand-color: #f04408;
+$color-grey1: #aeaeae;
+$color-grey2: #f5f5f5;
+$color-grey3: #262626;
 
 // Type
 $font-serif: 'austinbold', serif;
@@ -11,10 +14,10 @@ $index-logo: 2;
 $index-main: 1;
 
 // Toggle menu
-$toggle-width: 33px;
+$toggle-width: 50px;
 $toggle-height: 30px;
-$toggle-menu-weight: 3px;
-$toggle-menu-radius: 7px;
+$toggle-menu-weight: 2px;
+$toggle-menu-radius: 0;
 
 @font-face {
 	font-family: 'austinbold';

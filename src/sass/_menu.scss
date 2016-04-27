@@ -1,17 +1,146 @@
-nav {
-	background: rgba(0, 0, 0, .8);
-	left: 0;
-	min-height: 100vh;
-	position: fixed;
+// Menu inspiration from here: https://jonsuh.com/hamburgers/
+.menu--toggle {
+	position: absolute;
 	top: 0;
-	transition: all 500ms;
-	transition-timing-function: ease-out;
-	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	width: 30%;
-	z-index: $index-menu;
-	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	right: 0;
 
-	.menu-open & {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	.menu--toggle--wrapper {
+		display: inline-block;
+		background: none;
+		height: $toggle-height;
+		margin: 10px;
+		position: relative;
+		width: $toggle-width;
+
+		.menu--toggle--icon {
+			top: 50%;
+			transform: rotate(0);
+
+			&,
+			&:after,
+			&:before {
+				background-color: $brand-color;
+				border-radius: $toggle-menu-radius;
+				height: $toggle-menu-weight;
+				left: 0;
+				position: absolute;
+				transition: all 200ms;
+				width: $toggle-width;
+				display: block;
+			}
+
+			&:before {
+				content: '';
+				top: -17px;
+			}
+
+			&:after {
+				content: '';
+				bottom: -17px;
+			}
+		}
+
+		.menu--open & {
+			.menu--toggle--icon {
+				background: white;
+				transform: rotate(135deg);
+
+				&:after {
+					background: white;
+					bottom: 0;
+					transform: rotate(-90deg);
+				}
+
+				&:before {
+					top: 0;
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $min-medium) {
+		@include visuallyhidden();
+	}
+}
+
+nav {
+	.nav--links {
+		@include list-unstyled();
+		text-align: center;
+
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	&.mobile--nav {
+		background: $brand-color;
+		left: 0;
+		min-height: 100vh;
+		position: absolute;;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+		z-index: $index-menu;
+		padding: 5% 70px;
+		transform: translate3d(-100%, 0, 0);
+
+		.menu--toggle {
+			right: 5%;
+			top: 60px;
+		}
+
+		.menu--open & {
+			transform: translate3d(0, 0, 0);
+		}
+
+		.nav--links {
+			li {
+				margin: 75px 0;
+			}
+
+			a {
+				color: white;
+				font-size: 65px;
+			}
+		}
+
+		.contact--links {
+			@include list-inline();
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.brand--message {
+			color: white;
+		}
+
+
+		@media (min-width: $min-medium) {
+			@include visuallyhidden();
+		}
+	}
+
+
+	&.desktop--nav {
+		float: right;
+
+		.nav--links {
+			@include list-inline();
+
+			li {
+				font-size: 30px;
+				padding: 0;
+
+				&:not(:last-child):after {
+					content: '&';
+					padding-left: 35px;
+					padding-right: 35px;
+				}
+			}
+		}
 	}
 }

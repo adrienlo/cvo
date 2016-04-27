@@ -12,12 +12,12 @@
 			"path": "js/"
 		},
 		"images": {
-			"path": "/images/"
+			"path": "/assets/"
 		}
 	},
 	"source": {
 		"root": "./src/",
-		"images": "images/",
+		"images": "assets/",
 		"partials": "partials/",
 		"scripts": {
 			"entry": "js/app.js",

@@ -65,6 +65,7 @@ gulp.task('generate-html', () => {
 					}
 				}))
 				.pipe(injectPartial('navigation', 'navigation'))
+				.pipe(injectPartial('footer', 'footer'))
 				.pipe(rename(file))
 				.pipe(gulp.dest(config.build.root))
 				.pipe(browser.stream());

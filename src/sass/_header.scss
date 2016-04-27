@@ -1,95 +1,19 @@
-$header-top-padding: 275px;
-
 header {
-	padding: $header-top-padding 0 0;
+	margin: 0 60px 75px;
 	position: relative;
 
-	&:before {
-		background: $brand-color;
-		content: '';
-		display: block;
-		height: 44px;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 44px;
-	}
-
 	#cvo-logo {
-		margin-left: 145px;
+		margin-left: 0;
 		z-index: $index-logo;
 	}
 
-	// Menu inspiration from here: https://jonsuh.com/hamburgers/
-	.menu-toggle {
-		position: absolute;
-		top: $header-top-padding;
-		right: 0;
-		z-index: $index-menu-toggle;
-
-		.menu-toggle-wrapper {
-			display: inline-block;
-			background: none;
-			height: $toggle-height;
-			margin: 10px;
-			position: relative;
-			width: $toggle-width;
-
-			.menu-toggle-icon {
-				top: 50%;
-				transform: rotate(0);
-
-				&,
-				&:after,
-				&:before {
-					background-color: $brand-color;
-					border-radius: $toggle-menu-radius;
-					height: $toggle-menu-weight;
-					left: 0;
-					position: absolute;
-					transition: all 200ms;
-					width: $toggle-width;
-					display: block;
-				}
-
-				&:before {
-					content: '';
-					top: -7px;
-				}
-
-				&:after {
-					content: '';
-					bottom: -7px;
-				}
-			}
-
-			.menu-open & {
-				.menu-toggle-icon {
-					background: red;
-					transform: rotate(135deg);
-
-					&:after {
-						background: red;
-						bottom: 0;
-						transform: rotate(-90deg);
-					}
-
-					&:before {
-						top: 0;
-						opacity: 0;
-					}
-				}
-			}
-		}
-	}
-
 	@media (min-width: $min-medium) {
-		$header-top-padding: 200px;
+		@include clearfix();
+		
+		padding-top: 115px;
 
-		padding-top: $header-top-padding;
-
-		.menu-toggle {
-			top: $header-top-padding;
+		#cvo-logo {
+			float: left;
 		}
 	}
 }
