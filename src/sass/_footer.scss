@@ -1,5 +1,5 @@
 footer {
-	padding: 200px 0;
+	padding: 140px 0 0;
 	text-align: center;
 
 	h4 {
@@ -9,16 +9,36 @@ footer {
 
 	.contact--links {
 		@include list-unstyled();
+		font-family: $font-theme-2;
+		font-size: pixel-to-em(30px);
+		letter-spacing: .07em;
 
 		a {
-			letter-spacing: .07em;
 			text-transform: uppercase;
-			font-size: 30px;
 		}
 
 		li {
 			display: block;
 			margin: 120px 0;
+		}
+
+		@media (min-width: $min-medium) {
+			@include list-inline();
+			margin: 0 -20px;
+
+			li {
+				padding: 0 20px;
+
+				&:after {
+					display: inline-block;
+					content: '/';
+					margin-left: 35px;
+				}
+
+				&:last-child:after {
+					display: none;
+				}
+			}
 		}
 	}
 }

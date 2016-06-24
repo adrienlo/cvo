@@ -80,7 +80,7 @@ nav {
 		bottom: 0;
 		left: 0;
 		min-height: 100vh;
-		padding: 5% 70px;
+		padding: 5% 50px;
 		position: absolute;;
 		right: 0;
 		top: 0;
@@ -90,7 +90,7 @@ nav {
 
 		.menu--toggle {
 			right: 5%;
-			top: 60px;
+			top: 30px;
 		}
 
 		.menu--open & {
@@ -104,7 +104,8 @@ nav {
 
 			a {
 				color: white;
-				font-size: 65px;
+				font-family: $font-theme-2;
+				font-size: pixel-to-em(50px);
 			}
 		}
 

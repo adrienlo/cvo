@@ -1,3 +1,7 @@
+@function pixel-to-em($size: 16px) {
+	@return $size/16px * 1em;
+}
+
 @mixin clearfix {
 	zoom: 1;
 	&:before, &:after { content: ''; display: table; }

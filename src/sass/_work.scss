@@ -1,72 +1,69 @@
-.work--types {
-	padding: 10px 60px;
-
-	ul {
-		@include list-inline();
-		display: flex;
-		justify-content: space-around;
-
-		li {
-		}
-
-		a {
-			border-bottom: solid 2px transparent;
-			display: block;
-			font-size: 24px;
-			letter-spacing: .07em;
-			padding: 50px 0;
-			text-transform: uppercase;
-			transition: border-color 300ms ease-out;
-
-			position: relative;
-
-			&:after,
-			&:before {
-				background: $brand-color;
-				bottom: 0;
-				content: '';
-				height: 2px;
-				min-width: 0;
-				opacity: 0;
-				position: absolute;
-				transform: scaleX(-1);
-				transition: all 150ms ease-out;
-			}
-
-			&:before {
-				left: 49%;
-			}
-
-			&:after {
-				right: 49%;
-			}
-
-			&:hover {
-				&:before,
-				&:after {
-					background: $brand-color;
-					min-width: 50%;
-					opacity: 1;
-				}
-			}
-		}
-	}
-
-	@media (max-width: $max-small) {
-		@include visuallyhidden();
-	}
-}
+// .work--types {
+// 	padding: 10px 60px;
+//
+// 	ul {
+// 		@include list-inline();
+// 		display: flex;
+// 		justify-content: space-around;
+//
+// 		li {
+// 		}
+//
+// 		a {
+// 			border-bottom: solid 2px transparent;
+// 			display: block;
+// 			font-size: 24px;
+// 			letter-spacing: .07em;
+// 			padding: 50px 0;
+// 			position: relative;
+// 			text-transform: uppercase;
+// 			transition: border-color 300ms ease-out;
+//
+// 			&:after,
+// 			&:before {
+// 				background: $brand-color;
+// 				bottom: 0;
+// 				content: '';
+// 				height: 2px;
+// 				min-width: 0;
+// 				opacity: 0;
+// 				position: absolute;
+// 				transform: scaleX(-1);
+// 				transition: all 150ms ease-out;
+// 			}
+//
+// 			&:before {
+// 				left: 49%;
+// 			}
+//
+// 			&:after {
+// 				right: 49%;
+// 			}
+//
+// 			&:hover {
+// 				&:before,
+// 				&:after {
+// 					background: $brand-color;
+// 					min-width: 50%;
+// 					opacity: 1;
+// 				}
+// 			}
+// 		}
+// 	}
+//
+// 	@media (max-width: $max-small) {
+// 		@include visuallyhidden();
+// 	}
+// }
 
 .work--set {
-	.work--slides--container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		overflow-x: scroll;
-	}
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: pixel-to-em(100px);
 
-	.image--slide {
-		flex: 1 0 100%;
+	figure {
+		margin: 0;
 	}
 
 	.work--description {
@@ -88,9 +85,12 @@
 	ul {
 		@include list-unstyled();
 		display: block;
-		font-size: 50px;
+		font-family: $font-theme-2;
+		font-size: pixel-to-em(30px);
 
 		li {
+			padding-top: 0;
+			padding-bottom: 30px;
 			width: auto;
 		}
 	}

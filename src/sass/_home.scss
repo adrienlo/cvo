@@ -1,8 +1,13 @@
 blockquote {
 	color: $color-grey3;
-	font-size: 70px;
+	font-family: $font-theme-2;
+	font-size: pixel-to-em(55px);
 	margin: 150px 15% 300px;
 	text-align: center;
+
+	@media (min-width: $min-medium) {
+		font-size: pixel-to-em(70px);
+	}
 }
 
 .collaborators {
@@ -23,19 +28,24 @@ blockquote {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin: 0 -30px;
 
 		li {
-			width: 50%;
-			padding: 30px 0;
+			width: calc(50% - 60px);
+			padding: 60px 30px;
+
+			img {
+				@include full-width();
+			}
 		}
 	}
 
 	.cta--work {
 		color: $color-grey3;
-		display: block;
-		font-size: 30px;
+		display: inline-block;
+		font-size: pixel-to-em(30px);
 		letter-spacing: .07em;
-		margin: 200px 0;
+		margin: 80px auto 0;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
