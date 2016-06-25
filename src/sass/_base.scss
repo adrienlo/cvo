@@ -33,14 +33,20 @@ body {
 
 main {
 	@include clearfix();
-
 	position: relative;
 	z-index: $index-main;
 }
 
 svg {
-	> def,
-	text {
+	&.dom-hidden {
+		@include visuallyhidden();
+	}
+
+	defs {
+		@include visuallyhidden();
+	}
+
+	> text {
 		display: none;
 	}
 }

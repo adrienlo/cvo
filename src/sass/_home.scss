@@ -7,6 +7,7 @@ blockquote {
 
 	@media (min-width: $min-medium) {
 		font-size: pixel-to-em(70px);
+		text-align: left;
 	}
 }
 
@@ -38,7 +39,15 @@ blockquote {
 				@include full-width();
 			}
 		}
+
+		@media (min-width: $min-medium) {
+			li {
+				width: calc(50% - 120px);
+				padding: 60px 60px;
+			}
+		}
 	}
+
 
 	.cta--work {
 		color: $color-grey3;

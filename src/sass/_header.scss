@@ -10,6 +10,8 @@ header {
 	@media (min-width: $min-medium) {
 		display: flex;
 		padding-top: 115px;
+		align-items: flex-end;
+		justify-content: flex-end;
 
 		#cvo--logo {
 			align-self: flex-start;

@@ -111,9 +111,27 @@ nav {
 
 		.contact--links {
 			@include list-inline();
+			align-items: center;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+
+			li {
+				box-sizing: border-box;
+				flex: 1 0 0;
+				padding: 0 4%;
+			}
+
+			svg {
+				height: auto;
+				width: 100%;
+				fill: white;
+			}
+
+			img {
+				height: auto;
+				width: 100%;
+			}
 		}
 
 		.brand--message {
@@ -129,7 +147,6 @@ nav {
 
 	&.desktop--nav {
 		margin-left: auto;
-		align-self: baseline;
 
 		@media (max-width: $max-small) {
 			@include visuallyhidden();

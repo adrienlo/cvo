@@ -504,8 +504,27 @@ main {
   main:after {
     clear: both; }
 
-svg > def,
-svg text {
+svg.dom-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute; }
+
+svg defs {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute; }
+
+svg > text {
   display: none; }
 
 button {
@@ -597,7 +616,15 @@ header {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      padding-top: 115px; }
+      padding-top: 115px;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
       header #cvo--logo {
         -webkit-align-self: flex-start;
             -ms-flex-item-align: start;
@@ -708,6 +735,10 @@ nav.mobile--nav {
     padding-left: 0;
     list-style: none;
     margin-left: -5px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -725,6 +756,20 @@ nav.mobile--nav {
       display: inline-block;
       padding-left: 5px;
       padding-right: 5px; }
+    nav.mobile--nav .contact--links li {
+      box-sizing: border-box;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 0 0;
+          -ms-flex: 1 0 0;
+              flex: 1 0 0;
+      padding: 0 4%; }
+    nav.mobile--nav .contact--links svg {
+      height: auto;
+      width: 100%;
+      fill: white; }
+    nav.mobile--nav .contact--links img {
+      height: auto;
+      width: 100%; }
   nav.mobile--nav .brand--message {
     color: white; }
   @media (min-width: 46.25em) {
@@ -739,10 +784,7 @@ nav.mobile--nav {
       position: absolute; } }
 
 nav.desktop--nav {
-  margin-left: auto;
-  -webkit-align-self: baseline;
-      -ms-flex-item-align: baseline;
-          align-self: baseline; }
+  margin-left: auto; }
   @media (max-width: 45.25em) {
     nav.desktop--nav {
       clip: rect(0 0 0 0);
@@ -819,7 +861,8 @@ blockquote {
   text-align: center; }
   @media (min-width: 46.25em) {
     blockquote {
-      font-size: 4.375em; } }
+      font-size: 4.375em;
+      text-align: left; } }
 
 .collaborators {
   background: #f5f5f5;
@@ -861,6 +904,11 @@ blockquote {
         height: auto;
         vertical-align: top;
         width: 100%; }
+    @media (min-width: 46.25em) {
+      .collaborators ul li {
+        width: -webkit-calc(50% - 120px);
+        width: calc(50% - 120px);
+        padding: 60px 60px; } }
   .collaborators .cta--work {
     color: #262626;
     display: inline-block;
