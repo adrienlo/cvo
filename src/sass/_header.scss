@@ -2,31 +2,30 @@ header {
 	margin: 0 60px 75px;
 	position: relative;
 
-	#cvo--logo {
-		margin-left: 0;
-		z-index: $index-logo;
-	}
-
 	@media (min-width: $min-medium) {
 		display: flex;
 		padding-top: 115px;
 		align-items: flex-end;
 		justify-content: flex-end;
-
-		#cvo--logo {
-			align-self: flex-start;
-		}
 	}
 }
 
 #cvo--logo {
-	width: 50%;
+	max-width: 250px;
+	min-width: 150px;
+	margin-left: 0;
+	width: 30%;
+	z-index: $index-logo;
+
+	svg {
+		fill: #EF4823;
+	}
 
 	img {
 		@include full-width();
 	}
 
 	@media (min-width: $min-medium) {
-		width: auto;
+		align-self: flex-start;
 	}
 }

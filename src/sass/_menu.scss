@@ -65,6 +65,14 @@
 }
 
 nav {
+	.navigation--cvo--logo {
+		width: 40%;
+
+		svg {
+			fill: #fff;
+		}
+	}
+
 	.nav--links {
 		@include list-unstyled();
 		text-align: center;
@@ -80,7 +88,7 @@ nav {
 		bottom: 0;
 		left: 0;
 		min-height: 100vh;
-		padding: 5% 50px;
+		padding: 50px;
 		position: absolute;;
 		right: 0;
 		top: 0;
@@ -90,7 +98,7 @@ nav {
 
 		.menu--toggle {
 			right: 5%;
-			top: 30px;
+			top: 40px;
 		}
 
 		.menu--open & {
@@ -106,6 +114,10 @@ nav {
 				color: white;
 				font-family: $font-theme-2;
 				font-size: pixel-to-em(50px);
+
+				&:after {
+					background: #fff;
+				}
 			}
 		}
 
@@ -132,6 +144,10 @@ nav {
 				height: auto;
 				width: 100%;
 			}
+
+			a:after {
+				@include visuallyhidden();
+			}
 		}
 
 		.brand--message {
@@ -156,7 +172,7 @@ nav {
 			@include list-inline();
 
 			li {
-				font-size: 30px;
+				font-size: pixel-to-em(30px);
 				padding: 0;
 
 				&:not(:last-child):after {

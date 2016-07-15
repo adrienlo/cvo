@@ -32,35 +32,40 @@ $headings-obj: (
 		font-family: $font-theme-1,
 		font-size: pixel-to-em(30px),
 		font-weight: bold,
-		line-height: 1.8
+		line-height: 1.8,
+		letter-spacing: .07em
 	),
 	h2: (
 		color: $color-grey3,
 		font-family: $font-theme-1,
 		font-size: pixel-to-em(26px),
 		font-weight: bold,
-		line-height: 1.8
+		line-height: 1.8,
+		letter-spacing: .07em
 	),
 	h3: (
 		color: $color-grey3,
 		font-family: $font-theme-1,
 		font-size: pixel-to-em(20px),
 		font-weight: bold,
-		line-height: 1.8
+		line-height: 1.8,
+		letter-spacing: .07em
 	),
 	h4: (
 		color: $color-grey3,
 		font-family: $font-theme-1,
 		font-size: pixel-to-em(16px),
 		font-weight: bold,
-		line-height: 1.8
+		line-height: 1.8,
+		letter-spacing: .07em
 	),
 	h5: (
 		color: $color-grey3,
 		font-family: $font-theme-1,
 		font-size: pixel-to-em(12px),
 		font-weight: bold,
-		line-height: 1.8
+		line-height: 1.8,
+		letter-spacing: .07em
 	)
 );
 
@@ -71,7 +76,7 @@ $index-logo: 2;
 $index-main: 1;
 
 // Toggle menu
-$toggle-width: 50px;
+$toggle-width: 40px;
 $toggle-height: 30px;
 $toggle-menu-weight: 2px;
 $toggle-menu-radius: 0;

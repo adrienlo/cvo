@@ -477,7 +477,8 @@ body {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 16px;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   body:after, body:before {
     background: #f04408;
     content: '';
@@ -504,7 +505,7 @@ main {
   main:after {
     clear: both; }
 
-svg.dom-hidden {
+svg.dom {
   clip: rect(0 0 0 0);
   height: 1px;
   width: 1px;
@@ -535,7 +536,7 @@ button {
 
 .brand--message {
   color: #aeaeae;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   padding: 115px 0;
   text-align: center;
   text-transform: uppercase;
@@ -554,41 +555,62 @@ button {
 h1 {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 1.875em;
+  font-size: 1.875rem;
   font-weight: bold;
-  line-height: 1.8; }
+  line-height: 1.8;
+  letter-spacing: 0.07em; }
 
 h2 {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 1.625em;
+  font-size: 1.625rem;
   font-weight: bold;
-  line-height: 1.8; }
+  line-height: 1.8;
+  letter-spacing: 0.07em; }
 
 h3 {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: bold;
-  line-height: 1.8; }
+  line-height: 1.8;
+  letter-spacing: 0.07em; }
 
 h4 {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 1.8; }
+  line-height: 1.8;
+  letter-spacing: 0.07em; }
 
 h5 {
   color: #262626;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   font-weight: bold;
-  line-height: 1.8; }
+  line-height: 1.8;
+  letter-spacing: 0.07em; }
 
 a {
   color: #262626;
+  line-height: .8;
+  position: relative;
   text-decoration: none; }
+  a:after {
+    background: #262626;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    width: 0; }
+  a:hover:after {
+    left: 0;
+    width: 100%; }
 
 .image-blur {
   -webkit-filter: blur(45px);
@@ -607,9 +629,6 @@ a {
 header {
   margin: 0 60px 75px;
   position: relative; }
-  header #cvo--logo {
-    margin-left: 0;
-    z-index: 2; }
   @media (min-width: 46.25em) {
     header {
       display: -webkit-box;
@@ -624,21 +643,25 @@ header {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
-              justify-content: flex-end; }
-      header #cvo--logo {
-        -webkit-align-self: flex-start;
-            -ms-flex-item-align: start;
-                align-self: flex-start; } }
+              justify-content: flex-end; } }
 
 #cvo--logo {
-  width: 50%; }
+  max-width: 250px;
+  min-width: 150px;
+  margin-left: 0;
+  width: 30%;
+  z-index: 2; }
+  #cvo--logo svg {
+    fill: #EF4823; }
   #cvo--logo img {
     height: auto;
     vertical-align: top;
     width: 100%; }
   @media (min-width: 46.25em) {
     #cvo--logo {
-      width: auto; } }
+      -webkit-align-self: flex-start;
+          -ms-flex-item-align: start;
+              align-self: flex-start; } }
 
 .menu--toggle {
   position: absolute;
@@ -650,7 +673,7 @@ header {
     height: 30px;
     margin: 10px;
     position: relative;
-    width: 50px; }
+    width: 40px; }
     .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
       top: 50%;
       -webkit-transform: rotate(0);
@@ -665,7 +688,7 @@ header {
         position: absolute;
         -webkit-transition: all 200ms;
         transition: all 200ms;
-        width: 50px; }
+        width: 40px; }
       .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
         content: '';
         top: -17px; }
@@ -697,6 +720,11 @@ header {
       overflow: hidden;
       position: absolute; } }
 
+nav .navigation--cvo--logo {
+  width: 40%; }
+  nav .navigation--cvo--logo svg {
+    fill: #fff; }
+
 nav .nav--links {
   padding-left: 0;
   list-style: none;
@@ -710,7 +738,7 @@ nav.mobile--nav {
   bottom: 0;
   left: 0;
   min-height: 100vh;
-  padding: 5% 50px;
+  padding: 50px;
   position: absolute;
   right: 0;
   top: 0;
@@ -721,7 +749,7 @@ nav.mobile--nav {
   z-index: 3; }
   nav.mobile--nav .menu--toggle {
     right: 5%;
-    top: 30px; }
+    top: 40px; }
   .menu--open nav.mobile--nav {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
@@ -730,7 +758,9 @@ nav.mobile--nav {
   nav.mobile--nav .nav--links a {
     color: white;
     font-family: "montserrat-hairline", Arial, sans-serif;
-    font-size: 3.125em; }
+    font-size: 3.125rem; }
+    nav.mobile--nav .nav--links a:after {
+      background: #fff; }
   nav.mobile--nav .contact--links {
     padding-left: 0;
     list-style: none;
@@ -770,6 +800,15 @@ nav.mobile--nav {
     nav.mobile--nav .contact--links img {
       height: auto;
       width: 100%; }
+    nav.mobile--nav .contact--links a:after {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      position: absolute; }
   nav.mobile--nav .brand--message {
     color: white; }
   @media (min-width: 46.25em) {
@@ -804,7 +843,7 @@ nav.desktop--nav {
       padding-left: 5px;
       padding-right: 5px; }
     nav.desktop--nav .nav--links li {
-      font-size: 30px;
+      font-size: 1.875rem;
       padding: 0; }
       nav.desktop--nav .nav--links li:not(:last-child):after {
         content: '&';
@@ -821,7 +860,7 @@ footer {
     padding-left: 0;
     list-style: none;
     font-family: "montserrat-hairline", Arial, sans-serif;
-    font-size: 1.875em;
+    font-size: 1.875rem;
     letter-spacing: .07em; }
     footer .contact--links a {
       text-transform: uppercase; }
@@ -856,20 +895,67 @@ footer {
 blockquote {
   color: #262626;
   font-family: "montserrat-hairline", Arial, sans-serif;
-  font-size: 3.4375em;
+  font-size: 3.4375rem;
   margin: 150px 15% 300px;
   text-align: center; }
   @media (min-width: 46.25em) {
     blockquote {
-      font-size: 4.375em;
-      text-align: left; } }
+      font-size: 4.375rem;
+      margin-left: 144px;
+      margin-right: 144px;
+      text-align: left; }
+      blockquote:before {
+        content: "I.";
+        font-family: "montserrat-light", Arial, sans-serif;
+        font-size: 1.5rem;
+        padding-right: 20px; } }
+
+.featured {
+  zoom: 1;
+  padding: 50px 140px; }
+  .featured:before, .featured:after {
+    content: '';
+    display: table; }
+  .featured:after {
+    clear: both; }
+  .featured h3 {
+    text-transform: uppercase; }
+    .featured h3:before {
+      content: "II.";
+      font-family: "montserrat-light", Arial, sans-serif;
+      font-size: 1.5rem;
+      padding-right: 20px; }
+  .featured figure {
+    margin: 0; }
+  .featured img {
+    height: auto;
+    vertical-align: top;
+    width: 100%; }
+  .featured .featured--projects {
+    margin: 0 -14px; }
+    .featured .featured--projects .project {
+      margin: 14px; }
+    .featured .featured--projects .project--row .project {
+      float: left;
+      width: 47%;
+      width: -webkit-calc(50% - 28px);
+      width: calc(50% - 28px); }
+  @media (max-width: 59em) {
+    .featured {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      position: absolute; } }
 
 .collaborators {
   background: #f5f5f5;
   padding: 100px 15% 200px;
   text-align: center; }
   .collaborators h3 {
-    letter-spacing: .07em;
     margin-bottom: 20px;
     text-transform: uppercase; }
   .collaborators ul {
@@ -904,15 +990,10 @@ blockquote {
         height: auto;
         vertical-align: top;
         width: 100%; }
-    @media (min-width: 46.25em) {
-      .collaborators ul li {
-        width: -webkit-calc(50% - 120px);
-        width: calc(50% - 120px);
-        padding: 60px 60px; } }
   .collaborators .cta--work {
     color: #262626;
     display: inline-block;
-    font-size: 1.875em;
+    font-size: 1.875rem;
     letter-spacing: .07em;
     margin: 80px auto 0;
     position: relative;
@@ -929,6 +1010,28 @@ blockquote {
       right: -60px;
       top: -20px;
       width: 16px; }
+  @media (min-width: 46.25em) {
+    .collaborators {
+      background: #fff;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 100px 140px 200px;
+      text-align: left; }
+      .collaborators h3:before {
+        content: "III.";
+        font-family: "montserrat-light", Arial, sans-serif;
+        font-size: 1.5rem;
+        padding-right: 20px; }
+      .collaborators ul li {
+        width: -webkit-calc(25% - 60px);
+        width: calc(25% - 60px); } }
 
 .work--set {
   display: -webkit-box;
@@ -943,7 +1046,7 @@ blockquote {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin-bottom: 6.25em; }
+  margin-bottom: 6.25rem; }
   .work--set figure {
     margin: 0; }
   .work--set .work--description {
@@ -962,7 +1065,7 @@ blockquote {
     list-style: none;
     display: block;
     font-family: "montserrat-hairline", Arial, sans-serif;
-    font-size: 1.875em; }
+    font-size: 1.875rem; }
     .noteworty--collaborators ul li {
       padding-top: 0;
       padding-bottom: 30px;

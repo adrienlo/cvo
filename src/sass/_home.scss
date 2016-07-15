@@ -7,7 +7,49 @@ blockquote {
 
 	@media (min-width: $min-medium) {
 		font-size: pixel-to-em(70px);
+		margin-left: 144px;
+		margin-right: 144px;
 		text-align: left;
+
+		@include roman-numeral(1);
+	}
+}
+
+.featured {
+	@include clearfix();
+	padding: 50px 140px;
+
+	h3 {
+		@include roman-numeral(2);
+		text-transform: uppercase;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	img {
+		@include full-width();
+	}
+
+	.featured--projects {
+		margin: 0 -14px;
+
+		.project {
+			margin: 14px;
+		}
+
+		.project--row {
+			.project {
+				float: left;
+				width: 47%;
+				width: calc(50% - 28px);
+			}
+		}
+	}
+
+	@media (max-width: $max-medium) {
+		@include visuallyhidden();
 	}
 }
 
@@ -17,7 +59,6 @@ blockquote {
 	text-align: center;
 
 	h3 {
-		letter-spacing: .07em;
 		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
@@ -39,15 +80,7 @@ blockquote {
 				@include full-width();
 			}
 		}
-
-		@media (min-width: $min-medium) {
-			li {
-				width: calc(50% - 120px);
-				padding: 60px 60px;
-			}
-		}
 	}
-
 
 	.cta--work {
 		color: $color-grey3;
@@ -70,6 +103,22 @@ blockquote {
 			right: -60px;
 			top: -20px;
 			width: 16px;
+		}
+	}
+
+	@media (min-width: $min-medium) {
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		padding: 100px 140px 200px;
+		text-align: left;
+
+		h3 {
+			@include roman-numeral(3);
+		}
+
+		ul li {
+			width: calc(25% - 60px);
 		}
 	}
 }
