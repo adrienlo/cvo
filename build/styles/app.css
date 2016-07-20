@@ -772,7 +772,7 @@ nav.mobile--nav {
             transform: translate3d(0, 0, 0); }
   nav.mobile--nav .nav--links {
     margin-bottom: 112px;
-    margin-top: 40px; }
+    margin-top: 100px; }
     nav.mobile--nav .nav--links li {
       margin-bottom: 40px; }
     nav.mobile--nav .nav--links a {
