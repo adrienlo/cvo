@@ -84,10 +84,10 @@ nav {
 		z-index: $index-menu;
 
 		header {
-			padding: 36px 10px 0;
+			padding: 36px 0 0 10px;
 		}
 
-		#cvo--logo {		
+		#cvo--logo {
 			svg {
 				fill: #fff;
 			}
@@ -131,11 +131,12 @@ nav {
 				box-sizing: border-box;
 				flex: 1 0 0;
 				padding: 0 9px;
+				text-align: center;
 			}
 
 			svg {
 				height: auto;
-				width: 100%;
+				width: 18px;
 				fill: white;
 			}
 
