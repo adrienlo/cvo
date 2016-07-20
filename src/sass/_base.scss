@@ -11,9 +11,9 @@ body {
 		background: $brand-color;
 		content: '';
 		display: block;
-		height: 44px;
+		height: 19px;
 		position: absolute;
-		width: 44px;
+		width: 19px;
 	}
 
 	&:before {
@@ -38,10 +38,6 @@ main {
 }
 
 svg {
-	&.dom {
-		@include visuallyhidden();
-	}
-
 	defs {
 		@include visuallyhidden();
 	}
@@ -66,7 +62,18 @@ button {
 	text-transform: uppercase;
 	width: 100%;
 
+	&.absolute {
+		padding: 60px 0;
+		position: absolute;
+		top: 0;
+	}
+
 	@media (min-width: $min-medium) {
 		@include visuallyhidden();
 	}
+}
+
+.ada-hidden,
+.dom-hidden {
+	@include visuallyhidden();
 }

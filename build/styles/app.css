@@ -474,7 +474,7 @@ th {
 
 body {
   background: #fff;
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 16px;
   position: relative;
@@ -483,9 +483,9 @@ body {
     background: #f04408;
     content: '';
     display: block;
-    height: 44px;
+    height: 19px;
     position: absolute;
-    width: 44px; }
+    width: 19px; }
   body:before {
     left: 0;
     top: 0; }
@@ -504,16 +504,6 @@ main {
     display: table; }
   main:after {
     clear: both; }
-
-svg.dom {
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  position: absolute; }
 
 svg defs {
   clip: rect(0 0 0 0);
@@ -541,6 +531,10 @@ button {
   text-align: center;
   text-transform: uppercase;
   width: 100%; }
+  .brand--message.absolute {
+    padding: 60px 0;
+    position: absolute;
+    top: 0; }
   @media (min-width: 46.25em) {
     .brand--message {
       clip: rect(0 0 0 0);
@@ -552,8 +546,19 @@ button {
       overflow: hidden;
       position: absolute; } }
 
+.ada-hidden,
+.dom-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  position: absolute; }
+
 h1 {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
@@ -561,7 +566,7 @@ h1 {
   letter-spacing: 0.07em; }
 
 h2 {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 1.625rem;
   font-weight: bold;
@@ -569,7 +574,7 @@ h2 {
   letter-spacing: 0.07em; }
 
 h3 {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -577,7 +582,7 @@ h3 {
   letter-spacing: 0.07em; }
 
 h4 {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -585,20 +590,20 @@ h4 {
   letter-spacing: 0.07em; }
 
 h5 {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.5625rem;
   font-weight: bold;
   line-height: 1.8;
   letter-spacing: 0.07em; }
 
 a {
-  color: #262626;
+  color: #252525;
   line-height: .8;
   position: relative;
   text-decoration: none; }
   a:after {
-    background: #262626;
+    background: #252525;
     bottom: -5px;
     content: '';
     display: block;
@@ -627,18 +632,30 @@ a {
   position: absolute; }
 
 header {
-  margin: 0 60px 75px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 85px 55px 0;
   position: relative; }
+  header #cvo--logo {
+    width: 156px; }
   @media (min-width: 46.25em) {
     header {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       padding-top: 115px;
       -webkit-box-align: end;
       -webkit-align-items: flex-end;
           -ms-flex-align: end;
+                  -ms-grid-row-align: flex-end;
               align-items: flex-end;
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
@@ -646,10 +663,8 @@ header {
               justify-content: flex-end; } }
 
 #cvo--logo {
-  max-width: 250px;
-  min-width: 150px;
   margin-left: 0;
-  width: 30%;
+  width: 250px;
   z-index: 2; }
   #cvo--logo svg {
     fill: #EF4823; }
@@ -657,73 +672,73 @@ header {
     height: auto;
     vertical-align: top;
     width: 100%; }
+  #cvo--logo a:after {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute; }
   @media (min-width: 46.25em) {
     #cvo--logo {
       -webkit-align-self: flex-start;
           -ms-flex-item-align: start;
               align-self: flex-start; } }
 
-.menu--toggle {
-  position: absolute;
-  right: 0;
-  top: 0; }
-  .menu--toggle .menu--toggle--wrapper {
-    background: none;
-    display: inline-block;
-    height: 30px;
-    margin: 10px;
-    position: relative;
-    width: 40px; }
-    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
-      top: 50%;
-      -webkit-transform: rotate(0);
-          -ms-transform: rotate(0);
-              transform: rotate(0); }
-      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-        background-color: #f04408;
-        border-radius: 0;
-        display: block;
-        height: 2px;
-        left: 0;
-        position: absolute;
-        -webkit-transition: all 200ms;
-        transition: all 200ms;
-        width: 40px; }
-      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-        content: '';
-        top: -17px; }
-      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
-        content: '';
-        bottom: -17px; }
-    .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
+.menu--toggle .menu--toggle--wrapper {
+  background: none;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 40px; }
+  .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
+    top: 50%;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0); }
+    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+      background-color: #f04408;
+      border-radius: 0;
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      -webkit-transition: all 200ms;
+      transition: all 200ms;
+      width: 40px; }
+    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+      content: '';
+      top: -17px; }
+    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
+      content: '';
+      bottom: -17px; }
+  .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
+    background: white;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg); }
+    .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
       background: white;
-      -webkit-transform: rotate(135deg);
-          -ms-transform: rotate(135deg);
-              transform: rotate(135deg); }
-      .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
-        background: white;
-        bottom: 0;
-        -webkit-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg); }
-      .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-        top: 0;
-        opacity: 0; }
-  @media (min-width: 46.25em) {
-    .menu--toggle {
-      clip: rect(0 0 0 0);
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      position: absolute; } }
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+    .menu--open .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+      top: 0;
+      opacity: 0; }
 
-nav .navigation--cvo--logo {
-  width: 40%; }
-  nav .navigation--cvo--logo svg {
-    fill: #fff; }
+@media (min-width: 46.25em) {
+  .menu--toggle {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute; } }
 
 nav .nav--links {
   padding-left: 0;
@@ -738,7 +753,7 @@ nav.mobile--nav {
   bottom: 0;
   left: 0;
   min-height: 100vh;
-  padding: 50px;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -747,20 +762,24 @@ nav.mobile--nav {
   -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   z-index: 3; }
-  nav.mobile--nav .menu--toggle {
-    right: 5%;
-    top: 40px; }
+  nav.mobile--nav header {
+    padding: 36px 10px 0; }
+  nav.mobile--nav #cvo--logo svg {
+    fill: #fff; }
   .menu--open nav.mobile--nav {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
-  nav.mobile--nav .nav--links li {
-    margin: 75px 0; }
-  nav.mobile--nav .nav--links a {
-    color: white;
-    font-family: "montserrat-hairline", Arial, sans-serif;
-    font-size: 3.125rem; }
-    nav.mobile--nav .nav--links a:after {
-      background: #fff; }
+  nav.mobile--nav .nav--links {
+    margin-bottom: 112px;
+    margin-top: 40px; }
+    nav.mobile--nav .nav--links li {
+      margin-bottom: 40px; }
+    nav.mobile--nav .nav--links a {
+      color: white;
+      font-family: "montserrat-hairline", Arial, sans-serif;
+      font-size: 1.75rem; }
+      nav.mobile--nav .nav--links a:after {
+        background: #fff; }
   nav.mobile--nav .contact--links {
     padding-left: 0;
     list-style: none;
@@ -781,7 +800,8 @@ nav.mobile--nav {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    padding: 0 40px; }
     nav.mobile--nav .contact--links > li {
       display: inline-block;
       padding-left: 5px;
@@ -792,7 +812,7 @@ nav.mobile--nav {
       -webkit-flex: 1 0 0;
           -ms-flex: 1 0 0;
               flex: 1 0 0;
-      padding: 0 4%; }
+      padding: 0 9px; }
     nav.mobile--nav .contact--links svg {
       height: auto;
       width: 100%;
@@ -893,10 +913,10 @@ footer {
   width: 100%; }
 
 blockquote {
-  color: #262626;
+  color: #252525;
   font-family: "montserrat-hairline", Arial, sans-serif;
-  font-size: 3.4375rem;
-  margin: 150px 15% 300px;
+  font-size: 1.875rem;
+  margin: 150px 15% 120px;
   text-align: center; }
   @media (min-width: 46.25em) {
     blockquote {
@@ -918,9 +938,10 @@ blockquote {
     display: table; }
   .featured:after {
     clear: both; }
-  .featured h3 {
+  .featured h5 {
+    color: #252525;
     text-transform: uppercase; }
-    .featured h3:before {
+    .featured h5:before {
       content: "II.";
       font-family: "montserrat-light", Arial, sans-serif;
       font-size: 1.5rem;
@@ -953,10 +974,11 @@ blockquote {
 
 .collaborators {
   background: #f5f5f5;
-  padding: 100px 15% 200px;
+  padding: 47px 0 150px;
   text-align: center; }
-  .collaborators h3 {
-    margin-bottom: 20px;
+  .collaborators h5 {
+    color: #252525;
+    margin-bottom: 47px;
     text-transform: uppercase; }
   .collaborators ul {
     padding-left: 0;
@@ -985,15 +1007,15 @@ blockquote {
     .collaborators ul li {
       width: -webkit-calc(50% - 60px);
       width: calc(50% - 60px);
-      padding: 60px 30px; }
+      padding: 0 30px 64px; }
       .collaborators ul li img {
         height: auto;
         vertical-align: top;
         width: 100%; }
   .collaborators .cta--work {
-    color: #262626;
+    color: #252525;
     display: inline-block;
-    font-size: 1.875rem;
+    font-size: 0.8125rem;
     letter-spacing: .07em;
     margin: 80px auto 0;
     position: relative;
@@ -1001,15 +1023,15 @@ blockquote {
     text-decoration: none;
     text-transform: uppercase; }
     .collaborators .cta--work:before {
-      border-right: solid 2px #262626;
-      border-top: solid 2px #262626;
+      border-right: solid 2px #252525;
+      border-top: solid 2px #252525;
       content: '';
       display: block;
-      height: 16px;
+      height: 10px;
       position: absolute;
       right: -60px;
       top: -20px;
-      width: 16px; }
+      width: 10px; }
   @media (min-width: 46.25em) {
     .collaborators {
       background: #fff;

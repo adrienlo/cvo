@@ -1,9 +1,19 @@
 header {
-	margin: 0 60px 75px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 85px 55px 0;
 	position: relative;
 
+	#cvo--logo {
+		width: 156px;
+	}
+
+	.menu--toggle {
+
+	}
+
 	@media (min-width: $min-medium) {
-		display: flex;
 		padding-top: 115px;
 		align-items: flex-end;
 		justify-content: flex-end;
@@ -11,10 +21,8 @@ header {
 }
 
 #cvo--logo {
-	max-width: 250px;
-	min-width: 150px;
 	margin-left: 0;
-	width: 30%;
+	width: 250px;
 	z-index: $index-logo;
 
 	svg {
@@ -23,6 +31,10 @@ header {
 
 	img {
 		@include full-width();
+	}
+
+	a:after {
+		@include visuallyhidden();
 	}
 
 	@media (min-width: $min-medium) {

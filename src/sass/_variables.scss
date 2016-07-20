@@ -17,7 +17,7 @@
 $brand-color: #f04408;
 $color-grey1: #aeaeae;
 $color-grey2: #f5f5f5;
-$color-grey3: #262626;
+$color-grey3: #252525;
 
 // Type
 $font-theme-1: 'montserrat-light', Arial, sans-serif;
@@ -62,7 +62,7 @@ $headings-obj: (
 	h5: (
 		color: $color-grey3,
 		font-family: $font-theme-1,
-		font-size: pixel-to-em(12px),
+		font-size: pixel-to-em(9px),
 		font-weight: bold,
 		line-height: 1.8,
 		letter-spacing: .07em

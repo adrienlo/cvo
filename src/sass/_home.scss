@@ -1,8 +1,8 @@
 blockquote {
 	color: $color-grey3;
 	font-family: $font-theme-2;
-	font-size: pixel-to-em(55px);
-	margin: 150px 15% 300px;
+	font-size: pixel-to-em(30px);
+	margin: 150px 15% 120px;
 	text-align: center;
 
 	@media (min-width: $min-medium) {
@@ -19,8 +19,9 @@ blockquote {
 	@include clearfix();
 	padding: 50px 140px;
 
-	h3 {
+	h5 {
 		@include roman-numeral(2);
+		color: $color-grey3;
 		text-transform: uppercase;
 	}
 
@@ -55,11 +56,12 @@ blockquote {
 
 .collaborators {
 	background: $color-grey2;
-	padding: 100px 15% 200px;
+	padding: 47px 0 150px;
 	text-align: center;
 
-	h3 {
-		margin-bottom: 20px;
+	h5 {
+		color: $color-grey3;
+		margin-bottom: 47px;
 		text-transform: uppercase;
 	}
 
@@ -74,7 +76,7 @@ blockquote {
 
 		li {
 			width: calc(50% - 60px);
-			padding: 60px 30px;
+			padding: 0 30px 64px;
 
 			img {
 				@include full-width();
@@ -85,7 +87,7 @@ blockquote {
 	.cta--work {
 		color: $color-grey3;
 		display: inline-block;
-		font-size: pixel-to-em(30px);
+		font-size: pixel-to-em(13px);
 		letter-spacing: .07em;
 		margin: 80px auto 0;
 		position: relative;
@@ -98,11 +100,11 @@ blockquote {
 			border-top: solid 2px $color-grey3;
 			content: '';
 			display: block;
-			height: 16px;
+			height: 10px;
 			position: absolute;
 			right: -60px;
 			top: -20px;
-			width: 16px;
+			width: 10px;
 		}
 	}
 

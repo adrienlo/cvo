@@ -1,15 +1,16 @@
 footer {
-	padding: 140px 0 0;
+	padding: 100px 0 0;
 	text-align: center;
 
 	h4 {
 		letter-spacing: .07em;
+		margin-bottom: 100px;
 		text-transform: uppercase;
 	}
 
 	.contact--links {
 		@include list-unstyled();
-		font-family: $font-theme-2;
+		font-family: $font-theme-3;
 		font-size: pixel-to-em(30px);
 		letter-spacing: .07em;
 
@@ -19,7 +20,7 @@ footer {
 
 		li {
 			display: block;
-			margin: 120px 0;
+			margin: 0 0 125px;
 		}
 
 		@media (min-width: $min-medium) {
