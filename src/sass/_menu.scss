@@ -84,7 +84,7 @@ nav {
 		z-index: $index-menu;
 
 		header {
-			padding: 36px 0 0 10px;
+			padding: 72px 10px 0 20px;
 		}
 
 		#cvo--logo {
@@ -101,17 +101,17 @@ nav {
 		}
 
 		.nav--links {
-			margin-bottom: 112px;
-			margin-top: 40px;
+			margin-bottom: 224px;
+			margin-top: 80px;
 
 			li {
-				margin-bottom: 40px;
+				margin-bottom: 80px;
 			}
 
 			a {
 				color: white;
 				font-family: $font-theme-2;
-				font-size: pixel-to-em(28px);
+				font-size: pixel-to-em(56px);
 
 				&:after {
 					background: #fff;
@@ -136,7 +136,7 @@ nav {
 
 			svg {
 				height: auto;
-				width: 18px;
+				width: 36px;
 				fill: white;
 			}
 
