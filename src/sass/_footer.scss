@@ -10,7 +10,7 @@ footer {
 
 	.contact--links {
 		@include list-unstyled();
-		font-family: $font-theme-3;
+		font-family: $font-theme-2;
 		font-size: pixel-to-em(30px);
 		letter-spacing: .07em;
 

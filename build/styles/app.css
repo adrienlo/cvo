@@ -664,7 +664,8 @@ header {
 
 #cvo--logo {
   margin-left: 0;
-  width: 250px;
+  max-width: 156px;
+  min-width: 156px;
   z-index: 2; }
   #cvo--logo svg {
     fill: #EF4823; }
@@ -871,10 +872,11 @@ nav.desktop--nav {
         padding-right: 35px; }
 
 footer {
-  padding: 140px 0 0;
+  padding: 100px 0 0;
   text-align: center; }
   footer h4 {
     letter-spacing: .07em;
+    margin-bottom: 100px;
     text-transform: uppercase; }
   footer .contact--links {
     padding-left: 0;
@@ -886,7 +888,7 @@ footer {
       text-transform: uppercase; }
     footer .contact--links li {
       display: block;
-      margin: 120px 0; }
+      margin: 0 0 125px; }
     @media (min-width: 46.25em) {
       footer .contact--links {
         padding-left: 0;
