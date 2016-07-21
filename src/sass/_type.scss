@@ -16,7 +16,7 @@ a {
 	position: relative;
 	text-decoration: none;
 
-	&:after {
+	&:not([class]):after {
 		background: $color-grey3;
 		bottom: -5px;
 		content: '';
@@ -28,7 +28,7 @@ a {
 		width: 0;
 	}
 
-	&:hover {
+	&:not([class]):hover {
 		&:after {
 			left: 0;
 			width: 100%;

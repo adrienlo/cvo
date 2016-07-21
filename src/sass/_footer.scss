@@ -8,11 +8,21 @@ footer {
 		text-transform: uppercase;
 	}
 
+	@media (min-width: $min-medium) {
+		margin: 0 72px;
+		text-align: left;
+
+		h4 {
+			@include roman-numeral('iv');
+		}
+	}
+
 	.contact--links {
 		@include list-unstyled();
 		font-family: $font-theme-2;
 		font-size: pixel-to-em(30px);
 		letter-spacing: .07em;
+		padding-bottom: 185px;
 
 		a {
 			text-transform: uppercase;
@@ -20,20 +30,26 @@ footer {
 
 		li {
 			display: block;
-			margin: 0 0 125px;
+			margin: 0;
 		}
 
 		@media (min-width: $min-medium) {
 			@include list-inline();
-			margin: 0 -20px;
+			display: flex;
+			justify-content: space-between;
 
 			li {
-				padding: 0 20px;
+				display: inline-flex;
+				align-items: center;
 
 				&:after {
+					background: $color-grey2;
+					content: '';
 					display: inline-block;
-					content: '/';
-					margin-left: 35px;
+					height: 170px;
+					margin-left: 55px;
+					transform: rotate(15deg);
+					width: 2px;
 				}
 
 				&:last-child:after {

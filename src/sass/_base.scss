@@ -68,7 +68,14 @@ button {
 		top: 0;
 	}
 
-	@media (min-width: $min-medium) {
+	@media screen and (min-width: $min-medium) {
+		padding-left: 72px;
+		text-align: left;
+	}
+}
+
+.mobile-only {
+	@media screen and (min-width: $min-medium) {
 		@include visuallyhidden();
 	}
 }

@@ -14,7 +14,7 @@ header {
 	}
 
 	@media (min-width: $min-medium) {
-		padding-top: 115px;
+		padding: 58px 72px 0;
 		align-items: flex-end;
 		justify-content: flex-end;
 	}
@@ -40,5 +40,7 @@ header {
 
 	@media (min-width: $min-medium) {
 		align-self: flex-start;
+		max-width: 125px;
+		min-width: 125px;
 	}
 }

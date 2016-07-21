@@ -16,6 +16,7 @@
 			&:before {
 				background-color: $brand-color;
 				border-radius: $toggle-menu-radius;
+				content: '';
 				display: block;
 				height: $toggle-menu-weight;
 				left: 0;
@@ -24,25 +25,27 @@
 				width: $toggle-width;
 			}
 
+			& {
+				top: 0;
+			}
+
 			&:before {
-				content: '';
-				top: -17px;
+				top: 8px;
 			}
 
 			&:after {
-				content: '';
-				bottom: -17px;
+				top: 16px;
 			}
 		}
 
-		.menu--open & {
+		.menu--open .mobile--nav & {
 			.menu--toggle--icon {
 				background: white;
 				transform: rotate(135deg);
 
 				&:after {
 					background: white;
-					bottom: 0;
+					top: 0;
 					transform: rotate(-90deg);
 				}
 
@@ -172,7 +175,8 @@ nav {
 			@include list-inline();
 
 			li {
-				font-size: pixel-to-em(30px);
+				font-family: $font-theme-1;
+				font-size: pixel-to-em(15px);
 				padding: 0;
 
 				&:not(:last-child):after {

@@ -56,16 +56,12 @@
 	}
 }
 
-@mixin roman-numeral($num: 1) {
-	$roman: '';
-	@for $i from 1 through $num {
-		$roman: $roman + 'I';
-	}
-
+@mixin roman-numeral($num: 'i') {
 	&:before {
-		content: '#{$roman}.';
+		content: '#{$num}.';
 		font-family: $font-theme-1;
-		font-size: pixel-to-em(24px);
+		font-size: pixel-to-em(12px);
 		padding-right: 20px;
+		text-transform: uppercase;
 	}
 }
