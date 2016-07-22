@@ -894,6 +894,7 @@ footer {
       text-align: left; }
       footer h4:before {
         content: "iv.";
+        color: #252525;
         font-family: "montserrat-light", Arial, sans-serif;
         font-size: 0.75rem;
         padding-right: 20px;
@@ -969,6 +970,7 @@ blockquote {
       text-align: left; }
       blockquote:before {
         content: "i.";
+        color: #252525;
         font-family: "montserrat-light", Arial, sans-serif;
         font-size: 0.75rem;
         padding-right: 20px;
@@ -989,6 +991,7 @@ blockquote {
     text-transform: uppercase; }
     .featured h5:before {
       content: "ii.";
+      color: #252525;
       font-family: "montserrat-light", Arial, sans-serif;
       font-size: 0.75rem;
       padding-right: 20px;
@@ -1065,30 +1068,6 @@ blockquote {
         height: auto;
         vertical-align: top;
         width: 100%; }
-  .collaborators .cta--work {
-    color: #252525;
-    display: inline-block;
-    font-size: 0.8125rem;
-    letter-spacing: .07em;
-    padding: 80px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transition: background 200ms ease-out;
-    transition: background 200ms ease-out; }
-    .collaborators .cta--work:after {
-      background: transparent;
-      border-right: solid 2px #252525;
-      border-top: solid 2px #252525;
-      content: '';
-      display: inline-block;
-      display: inline-block;
-      height: 10px;
-      position: relative;
-      right: -20px;
-      top: -20px;
-      width: 10px; }
   @media (min-width: 46.25em) {
     .collaborators {
       background: #fff;
@@ -1108,6 +1087,7 @@ blockquote {
         margin-right: 72px; }
         .collaborators h5:before {
           content: "iii.";
+          color: #252525;
           font-family: "montserrat-light", Arial, sans-serif;
           font-size: 0.75rem;
           padding-right: 20px;
@@ -1117,12 +1097,41 @@ blockquote {
         margin-right: 72px; }
         .collaborators ul li {
           width: -webkit-calc(25% - 60px);
-          width: calc(25% - 60px); }
-      .collaborators .cta--work {
-        background: #f5f5f5;
-        font-size: 0.9375rem; }
-        .collaborators .cta--work:hover {
-          background: #f45701; } }
+          width: calc(25% - 60px); } }
+
+.cta--work {
+  color: #252525;
+  display: inline-block;
+  font-size: 0.8125rem;
+  letter-spacing: .07em;
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background 200ms ease-out;
+  transition: background 200ms ease-out; }
+  .cta--work:after {
+    background: transparent;
+    border-right: solid 2px #252525;
+    border-top: solid 2px #252525;
+    content: '';
+    display: inline-block;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: -20px;
+    top: -20px;
+    width: 10px; }
+  @media (min-width: 46.25em) {
+    .cta--work {
+      background: #f5f5f5;
+      font-size: 0.9375rem; }
+      .cta--work:hover {
+        background: #f45701;
+        color: #fff; }
+        .cta--work:hover:after {
+          border-color: #fff; } }
 
 .work--set {
   display: -webkit-box;
