@@ -1,23 +1,61 @@
 footer {
-	margin: 200px 0;
+	padding: 100px 0 0;
 	text-align: center;
 
 	h4 {
+		letter-spacing: .07em;
+		margin-bottom: 100px;
 		text-transform: uppercase;
+	}
+
+	@media (min-width: $min-medium) {
+		margin: 0 72px;
+		text-align: left;
+
+		h4 {
+			@include roman-numeral('iv');
+		}
 	}
 
 	.contact--links {
 		@include list-unstyled();
+		font-family: $font-theme-2;
+		font-size: pixel-to-em(30px);
+		letter-spacing: .07em;
+		padding-bottom: 185px;
 
 		a {
 			text-transform: uppercase;
-			font-size: 30px;
 		}
 
 		li {
 			display: block;
-			margin: 120px 0;
+			margin: 0;
+		}
+
+		@media (min-width: $min-medium) {
+			@include list-inline();
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				display: inline-flex;
+				align-items: center;
+
+				&:after {
+					background: $color-grey2;
+					content: '';
+					display: inline-block;
+					height: 170px;
+					margin-left: 55px;
+					transform: rotate(15deg);
+					width: 2px;
+				}
+
+				&:last-child:after {
+					display: none;
+				}
+			}
 		}
 	}
-
 }

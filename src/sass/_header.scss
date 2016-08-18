@@ -1,19 +1,46 @@
 header {
-	margin: 0 60px 75px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 85px 55px 0;
 	position: relative;
 
-	#cvo-logo {
-		margin-left: 0;
-		z-index: $index-logo;
+	#cvo--logo {
+		width: 156px;
+	}
+
+	.menu--toggle {
+
 	}
 
 	@media (min-width: $min-medium) {
-		@include clearfix();
-		
-		padding-top: 115px;
+		padding: 58px 72px 0;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+}
 
-		#cvo-logo {
-			float: left;
-		}
+#cvo--logo {
+	margin-left: 0;
+	max-width: 84px;
+	min-width: 84px;
+	z-index: $index-logo;
+
+	svg {
+		fill: #EF4823;
+	}
+
+	img {
+		@include full-width();
+	}
+
+	a:after {
+		@include visuallyhidden();
+	}
+
+	@media (min-width: $min-medium) {
+		align-self: flex-start;
+		max-width: 125px;
+		min-width: 125px;
 	}
 }

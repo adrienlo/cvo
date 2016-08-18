@@ -1,24 +1,19 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	background: #fff;
 	color: $color-grey3;
 	font-family: $font-sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	position: relative;
-	// overflow-x: hidden;
+	overflow-x: hidden;
 
 	&:after,
 	&:before {
 		background: $brand-color;
 		content: '';
 		display: block;
-		height: 44px;
+		height: 19px;
 		position: absolute;
-		width: 44px;
+		width: 19px;
 	}
 
 	&:before {
@@ -38,14 +33,16 @@ body {
 
 main {
 	@include clearfix();
-
 	position: relative;
 	z-index: $index-main;
 }
 
 svg {
-	> def,
-	text {
+	defs {
+		@include visuallyhidden();
+	}
+
+	> text {
 		display: none;
 	}
 }
@@ -58,13 +55,32 @@ button {
 }
 
 .brand--message {
-	width: 100%;
-	text-align: center;
-	padding: 115px 0;
 	color: $color-grey1;
+	font-size: pixel-to-em(12px);
+	padding: 115px 0;
+	text-align: center;
 	text-transform: uppercase;
+	width: 100%;
 
-	@media (min-width: $min-medium) {
+	&.absolute {
+		padding: 60px 0;
+		position: absolute;
+		top: 0;
+	}
+
+	@media screen and (min-width: $min-medium) {
+		padding-left: 72px;
+		text-align: left;
+	}
+}
+
+.mobile-only {
+	@media screen and (min-width: $min-medium) {
 		@include visuallyhidden();
 	}
+}
+
+.ada-hidden,
+.dom-hidden {
+	@include visuallyhidden();
 }
