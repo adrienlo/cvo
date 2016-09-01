@@ -30,6 +30,7 @@ footer {
 
 		li {
 			display: block;
+			line-height: 3;
 			margin: 0;
 		}
 
@@ -39,8 +40,9 @@ footer {
 			justify-content: space-between;
 
 			li {
-				display: inline-flex;
 				align-items: center;
+				display: inline-flex;
+				line-height: normal;
 
 				&:after {
 					background: $color-grey2;

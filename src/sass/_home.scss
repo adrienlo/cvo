@@ -18,6 +18,8 @@ blockquote {
 .featured {
 	@include clearfix();
 	background: $color-grey2;
+	display: flex;
+	flex-direction: column;
 	padding: 50px 72px;
 
 	h5 {
@@ -39,13 +41,24 @@ blockquote {
 		@include clearfix();
 		margin: 0 -14px;
 
+		figcaption {
+			color: #aaa;
+			font-size: pixel-to-em(14px);
+			line-height: 21px;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			text-align: right;
+		}
+
 		.project {
-			margin: 0 14px;
+			margin: 0 25% 0 14px;
 		}
 
 		.project--row {
 			.project {
 				float: left;
+				margin-left: 14px;
+				margin-right: 14px;
 				width: 47%;
 				width: calc(50% - 28px);
 			}
