@@ -59,9 +59,6 @@
 
 .work--set {
 	background: #f2f2f2;
-	// display: flex;
-	// flex-direction: column;
-	// flex-wrap: wrap;
 
 	@media (min-width: $min-medium) {
 		display: flex;
@@ -72,14 +69,34 @@
 
 	img {
 		@include full-width();
+
+		&.lazyloaded {
+			opacity: .6;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 	figure {
 		margin: 0;
 		padding-bottom: pixel-to-em(50px);
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 151px;
+			background: black;
+		}
 	}
 
 	figcaption {
+		background: #f2f2f2;
 		color: #aaa;
 		font-size: pixel-to-em(14px);
 		line-height: 21px;

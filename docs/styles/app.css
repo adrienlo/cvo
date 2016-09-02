@@ -527,7 +527,7 @@ button {
 .brand--message {
   color: #aeaeae;
   font-size: 0.75rem;
-  padding: 115px 0;
+  padding: 0 0 75px;
   text-align: center;
   text-transform: uppercase;
   width: 100%; }
@@ -561,6 +561,15 @@ button {
   border: 0;
   overflow: hidden;
   position: absolute; }
+
+.lazyload,
+.lazyloading {
+  opacity: 0; }
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+  will-change: opacity; }
 
 h1 {
   color: #252525;
@@ -615,7 +624,6 @@ a {
     height: 2px;
     left: 50%;
     position: absolute;
-    -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
     width: 0; }
   a:not([class]):hover:after {
@@ -637,16 +645,12 @@ a {
   position: absolute; }
 
 header {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -657,12 +661,10 @@ header {
   @media (min-width: 46.25em) {
     header {
       padding: 60px 72px;
-      -webkit-box-align: end;
       -webkit-align-items: flex-end;
           -ms-flex-align: end;
                   -ms-grid-row-align: flex-end;
               align-items: flex-end;
-      -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; } }
@@ -714,7 +716,6 @@ header {
       height: 2px;
       left: 0;
       position: absolute;
-      -webkit-transition: all 200ms;
       transition: all 200ms;
       width: 24px; }
     .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
@@ -768,7 +769,6 @@ nav.mobile--nav {
   top: 0;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
-  -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   z-index: 3; }
   nav.mobile--nav header {
@@ -793,20 +793,15 @@ nav.mobile--nav {
     padding-left: 0;
     list-style: none;
     margin-left: -5px;
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -817,7 +812,6 @@ nav.mobile--nav {
       padding-right: 5px; }
     nav.mobile--nav .contact--links li {
       box-sizing: border-box;
-      -webkit-box-flex: 1;
       -webkit-flex: 1 0 0;
           -ms-flex: 1 0 0;
               flex: 1 0 0;
@@ -917,11 +911,9 @@ footer {
         padding-left: 0;
         list-style: none;
         margin-left: -5px;
-        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
@@ -930,11 +922,9 @@ footer {
           padding-left: 5px;
           padding-right: 5px; }
         footer .contact--links li {
-          -webkit-box-align: center;
           -webkit-align-items: center;
               -ms-flex-align: center;
                   align-items: center;
-          display: -webkit-inline-box;
           display: -webkit-inline-flex;
           display: -ms-inline-flexbox;
           display: inline-flex;
@@ -962,7 +952,7 @@ blockquote {
   color: #252525;
   font-family: "montserrat-hairline", Arial, sans-serif;
   font-size: 1.875rem;
-  margin: 150px 15% 120px;
+  margin: 40px 15% 120px;
   text-align: center; }
   @media (min-width: 46.25em) {
     blockquote {
@@ -981,12 +971,9 @@ blockquote {
 .featured {
   zoom: 1;
   background: #f5f5f5;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -1035,7 +1022,6 @@ blockquote {
       margin-left: 14px;
       margin-right: 14px;
       width: 47%;
-      width: -webkit-calc(50% - 28px);
       width: calc(50% - 28px); }
   @media (max-width: 59em) {
     .featured {
@@ -1059,29 +1045,23 @@ blockquote {
   .collaborators ul {
     padding-left: 0;
     list-style: none;
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 -30px; }
     .collaborators ul li {
-      width: -webkit-calc(50% - 60px);
       width: calc(50% - 60px);
       padding: 0 30px 64px; }
       .collaborators ul li img {
@@ -1091,12 +1071,9 @@ blockquote {
   @media (min-width: 46.25em) {
     .collaborators {
       background: #fff;
-      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column;
@@ -1116,7 +1093,6 @@ blockquote {
         margin-left: 72px;
         margin-right: 72px; }
         .collaborators ul li {
-          width: -webkit-calc(25% - 60px);
           width: calc(25% - 60px); } }
 
 .cta--work {
@@ -1129,7 +1105,6 @@ blockquote {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: background 200ms ease-out;
   transition: background 200ms ease-out; }
   .cta--work:after {
     background: transparent;
@@ -1160,7 +1135,6 @@ blockquote {
     padding-left: 0;
     list-style: none;
     margin-left: -5px;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1180,7 +1154,6 @@ blockquote {
       padding: 50px 0 25px;
       position: relative;
       text-transform: uppercase;
-      -webkit-transition: border-color 300ms ease-out;
       transition: border-color 300ms ease-out; }
       .work--types ul a:after, .work--types ul a:before {
         background: #f04408;
@@ -1193,7 +1166,6 @@ blockquote {
         -webkit-transform: scaleX(-1);
             -ms-transform: scaleX(-1);
                 transform: scaleX(-1);
-        -webkit-transition: all 150ms ease-out;
         transition: all 150ms ease-out; }
       .work--types ul a:before {
         left: 49%; }
@@ -1218,12 +1190,9 @@ blockquote {
   background: #f2f2f2; }
   @media (min-width: 46.25em) {
     .work--set {
-      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row;
@@ -1235,10 +1204,24 @@ blockquote {
     height: auto;
     vertical-align: top;
     width: 100%; }
+    .work--set img.lazyloaded {
+      opacity: .6; }
+    .work--set img:hover {
+      opacity: 1; }
   .work--set figure {
     margin: 0;
-    padding-bottom: 3.125rem; }
+    padding-bottom: 3.125rem;
+    position: relative; }
+    .work--set figure:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 151px;
+      background: black; }
   .work--set figcaption {
+    background: #f2f2f2;
     color: #aaa;
     font-size: 0.875rem;
     line-height: 21px;
