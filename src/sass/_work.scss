@@ -70,12 +70,14 @@
 	img {
 		@include full-width();
 
-		&.lazyloaded {
-			opacity: .6;
-		}
+		@media (min-width: $min-medium) {
+			&.lazyloaded {
+				opacity: .9;
+			}
 
-		&:hover {
-			opacity: 1;
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -91,7 +93,7 @@
 			right: 0;
 			left: 0;
 			bottom: 151px;
-			background: black;
+			background: white;
 		}
 	}
 

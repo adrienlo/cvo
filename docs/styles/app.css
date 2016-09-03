@@ -1204,10 +1204,11 @@ blockquote {
     height: auto;
     vertical-align: top;
     width: 100%; }
-    .work--set img.lazyloaded {
-      opacity: .6; }
-    .work--set img:hover {
-      opacity: 1; }
+    @media (min-width: 46.25em) {
+      .work--set img.lazyloaded {
+        opacity: .9; }
+      .work--set img:hover {
+        opacity: 1; } }
   .work--set figure {
     margin: 0;
     padding-bottom: 3.125rem;
@@ -1219,7 +1220,7 @@ blockquote {
       right: 0;
       left: 0;
       bottom: 151px;
-      background: black; }
+      background: white; }
   .work--set figcaption {
     background: #f2f2f2;
     color: #aaa;
