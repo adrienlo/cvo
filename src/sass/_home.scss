@@ -45,8 +45,8 @@ blockquote {
 			color: #aaa;
 			font-size: pixel-to-em(14px);
 			line-height: 21px;
-			padding-bottom: 40px;
-			padding-top: 40px;
+			padding-bottom: 15px;
+			padding-top: 15px;
 			text-align: right;
 		}
 
@@ -104,7 +104,7 @@ blockquote {
 		background: #fff;
 		display: flex;
 		flex-direction: column;
-		padding: 110px 0 200px;
+		padding: 110px 0;
 		text-align: left;
 
 		h5 {
@@ -153,6 +153,7 @@ blockquote {
 	@media (min-width: $min-medium) {
 		background: $color-grey2;
 		font-size: pixel-to-em(15px);
+		margin: 0 -72px;
 
 		&:hover {
 			background: #f45701;

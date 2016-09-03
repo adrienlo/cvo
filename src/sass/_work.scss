@@ -1,6 +1,6 @@
 .work--types {
 	background: #f2f2f2;
-	padding: 10px 60px;
+	padding: 40px 60px 10px;
 
 	ul {
 		@include list-inline();
@@ -15,7 +15,7 @@
 		a {
 			border-bottom: solid 2px transparent;
 			display: block;
-			padding: 50px 0 25px;
+			padding: 0 0 25px;
 			position: relative;
 			text-transform: uppercase;
 			transition: border-color 300ms ease-out;
@@ -64,7 +64,6 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		padding-bottom: pixel-to-em(50px);
 	}
 
 	img {
@@ -99,11 +98,10 @@
 
 	figcaption {
 		background: #f2f2f2;
-		color: #aaa;
+		color: #717171;
 		font-size: pixel-to-em(14px);
 		line-height: 21px;
-		padding-bottom: 40px;
-		padding-top: 40px;
+		padding-top: 20px;
 	}
 
 	.work--description {
@@ -112,14 +110,22 @@
 	}
 
 	&:nth-of-type(1) {
-		padding-top: 100px;
-		padding-left: 5%;
-		padding-right: 5%;
+		margin: 0 -12.5px;
+		padding-bottom: 22px;
+		padding-left: 72px;
+		padding-right: 72px;
+		padding-top: 30px;
 
 		@media (min-width: $min-medium) {
+			margin: 0 -12.5px;
+			padding-bottom: 22px;
+			padding-left: 72px;
+			padding-right: 72px;
+			padding-top: 30px;
+
 			figure {
-				margin-left: 25px;
-				margin-right: 25px;
+				margin-left: 12.5px;
+				margin-right: 12.5px;
 			}
 		}
 	}
@@ -131,8 +137,11 @@
 		}
 
 		@media (min-width: $min-medium) {
+			padding-bottom: 57px;
+
 			figcaption {
-				text-align: left;
+				padding-right: 72px;
+				text-align: right;
 			}
 		}
 	}
@@ -142,8 +151,13 @@
 		padding-right: 5%;
 
 		@media (min-width: $min-medium) {
-			padding-left: 15%;
-			padding-right: 15%;
+			padding-bottom: 65px;
+			padding-left: 158px;
+			padding-right: 158px;
+
+			figcaption {
+				text-align: right;
+			}
 		}
 	}
 
@@ -163,16 +177,16 @@
 		}
 
 		@media (min-width: $min-medium) {
-			padding-left: 5%;
-			padding-right: 24%;
+			margin: 0 -12.5px;
+			padding: 30px 72px 0;
 
 			figure {
-				margin-left: 25px;
-				margin-right: 25px;
+				margin-left: 12.5px;
+				margin-right: 12.5px;
+			}
 
-				figcaption {
-					text-align: left;
-				}
+			figcaption {
+				text-align: right;
 			}
 		}
 	}
@@ -182,9 +196,16 @@
 		padding-right: 5%;
 
 		@media (min-width: $min-medium) {
+			margin: 0 -12.5px;
+			padding: 30px 72px 34px;
+
 			figure {
-				margin-left: 25px;
-				margin-right: 25px;
+				margin-left: 12.5px;
+				margin-right: 12.5px;
+			}
+
+			figcaption {
+				text-align: right;
 			}
 		}
 	}
@@ -195,11 +216,11 @@
 		}
 
 		@media (min-width: $min-medium) {
-			padding-left: 24%;
-			padding-right: 5%;
+			padding-left: 158px;
+			padding-right: 158px;
 
 			figcaption {
-				text-align: left;
+				text-align: right;
 			}
 		}
 	}
@@ -209,6 +230,11 @@
 	background: $brand-color;
 	color: white;
 	text-align: left;
+	padding-bottom: 0;
+
+	.cta--work {
+		margin-top: 100px;
+	}
 
 	h3 {
 		@include roman-numeral('ii');
@@ -245,8 +271,7 @@
 		}
 
 		@media (min-width: $min-medium) {
-			font-family: $font-theme-1;
-			font-size: pixel-to-em(30px);
+			font-size: pixel-to-em(38px);
 			margin-left: 70px;
 
 			li {
