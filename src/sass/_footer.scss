@@ -1,10 +1,10 @@
 footer {
-	padding: 100px 0 0;
+	padding: 39px 0 0;
 	text-align: center;
 
 	h4 {
 		letter-spacing: .07em;
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 		text-transform: uppercase;
 	}
 
@@ -22,7 +22,7 @@ footer {
 		font-family: $font-theme-2;
 		font-size: pixel-to-em(30px);
 		letter-spacing: .07em;
-		padding-bottom: 185px;
+		padding-bottom: 90px;
 
 		a {
 			text-transform: uppercase;
@@ -48,7 +48,7 @@ footer {
 					background: $color-grey2;
 					content: '';
 					display: inline-block;
-					height: 170px;
+					height: 140px;
 					margin-left: 55px;
 					transform: rotate(15deg);
 					width: 2px;
