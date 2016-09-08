@@ -8,7 +8,7 @@
 		justify-content: space-around;
 
 		li {
-			font-size: pixel-to-em(14px);
+			font-size: pixel-to-em(12px);
 			letter-spacing: .07em;
 		}
 
@@ -77,7 +77,7 @@
 
 		@media (min-width: $min-medium) {
 			&.lazyloaded {
-				opacity: .9;
+				opacity: .8;
 			}
 
 			&:hover {

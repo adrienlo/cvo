@@ -38,7 +38,7 @@ blockquote {
 
 		@media (min-width: $min-medium) {
 			&.lazyloaded {
-				opacity: .9;
+				opacity: .8;
 			}
 
 			&:hover {
@@ -49,7 +49,7 @@ blockquote {
 
 	.featured--projects {
 		@include clearfix();
-		margin: 0 -14px;
+		margin: 0 -14px 110px;
 
 		figcaption {
 			color: #aaa;

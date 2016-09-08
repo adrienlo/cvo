@@ -44,19 +44,19 @@ footer {
 				display: inline-flex;
 				line-height: normal;
 
-				&:after {
-					background: $color-grey2;
-					content: '';
-					display: inline-block;
-					height: 140px;
-					margin-left: 55px;
-					transform: rotate(15deg);
-					width: 2px;
-				}
-
-				&:last-child:after {
-					display: none;
-				}
+				// &:after {
+				// 	background: $color-grey2;
+				// 	content: '';
+				// 	display: inline-block;
+				// 	height: 140px;
+				// 	margin-left: 55px;
+				// 	transform: rotate(15deg);
+				// 	width: 2px;
+				// }
+				//
+				// &:last-child:after {
+				// 	display: none;
+				// }
 			}
 		}
 	}
