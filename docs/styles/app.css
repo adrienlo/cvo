@@ -977,7 +977,7 @@ blockquote {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 72px; }
+  padding: 50px 72px 0; }
   .featured:before, .featured:after {
     content: '';
     display: table; }
@@ -1000,6 +1000,11 @@ blockquote {
     height: auto;
     vertical-align: top;
     width: 100%; }
+    @media (min-width: 46.25em) {
+      .featured img.lazyloaded {
+        opacity: .9; }
+      .featured img:hover {
+        opacity: 1; } }
   .featured .featured--projects {
     zoom: 1;
     margin: 0 -14px; }
@@ -1187,122 +1192,132 @@ blockquote {
       overflow: hidden;
       position: absolute; } }
 
-.work--set {
+.work {
   background: #f2f2f2; }
+
+@media (min-width: 46.25em) {
+  .work--set,
+  .work--set .work--wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+
+.work--set img {
+  height: auto;
+  vertical-align: top;
+  width: 100%; }
   @media (min-width: 46.25em) {
-    .work--set {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; } }
-  .work--set img {
-    height: auto;
-    vertical-align: top;
-    width: 100%; }
-    @media (min-width: 46.25em) {
-      .work--set img.lazyloaded {
-        opacity: .9; }
-      .work--set img:hover {
-        opacity: 1; } }
-  .work--set figure {
-    margin: 0;
-    padding-bottom: 3.125rem;
-    position: relative; }
-    .work--set figure:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 151px;
-      background: white; }
-  .work--set figcaption {
-    background: #f2f2f2;
-    color: #717171;
-    font-size: 0.875rem;
-    line-height: 21px;
-    padding-top: 20px; }
-  .work--set .work--description {
-    font-size: 16px;
-    padding: 30px 30px 160px; }
-  .work--set:nth-of-type(1) {
-    margin: 0 -12.5px;
-    padding-bottom: 22px;
-    padding-left: 72px;
-    padding-right: 72px;
-    padding-top: 30px; }
-    @media (min-width: 46.25em) {
-      .work--set:nth-of-type(1) {
-        margin: 0 -12.5px;
-        padding-bottom: 22px;
-        padding-left: 72px;
-        padding-right: 72px;
-        padding-top: 30px; }
-        .work--set:nth-of-type(1) figure {
-          margin-left: 12.5px;
-          margin-right: 12.5px; } }
-  .work--set:nth-of-type(2) figcaption {
-    padding-left: 5%;
-    text-align: center; }
+    .work--set img.lazyloaded {
+      opacity: .9; }
+    .work--set img:hover {
+      opacity: 1; } }
+
+.work--set figure {
+  margin: 0;
+  padding-bottom: 3.125rem;
+  position: relative; }
+
+.work--set figcaption {
+  color: #717171;
+  font-size: 0.875rem;
+  line-height: 21px;
+  padding-top: 20px; }
+
+.work--set .work--description {
+  font-size: 16px;
+  padding: 30px 30px 160px; }
+
+.work--set .work--wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; }
+
+.work--set:nth-of-type(1) {
+  margin: 0 -12.5px;
+  padding-bottom: 22px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 30px; }
   @media (min-width: 46.25em) {
-    .work--set:nth-of-type(2) {
-      padding-bottom: 57px; }
-      .work--set:nth-of-type(2) figcaption {
-        padding-right: 72px;
-        text-align: right; } }
-  .work--set:nth-of-type(3) {
-    padding-left: 5%;
-    padding-right: 5%; }
-    @media (min-width: 46.25em) {
-      .work--set:nth-of-type(3) {
-        padding-bottom: 65px;
-        padding-left: 158px;
-        padding-right: 158px; }
-        .work--set:nth-of-type(3) figcaption {
-          text-align: right; } }
-  .work--set:nth-of-type(4) {
-    padding-left: 5%;
-    padding-right: 5%; }
-    @media (max-width: 45.25em) {
-      .work--set:nth-of-type(4) figure:nth-of-type(1) {
-        margin-left: -5%;
-        margin-right: -5%; }
-        .work--set:nth-of-type(4) figure:nth-of-type(1) figcaption {
-          text-align: center; } }
-    @media (min-width: 46.25em) {
-      .work--set:nth-of-type(4) {
-        margin: 0 -12.5px;
-        padding: 30px 72px 0; }
-        .work--set:nth-of-type(4) figure {
-          margin-left: 12.5px;
-          margin-right: 12.5px; }
-        .work--set:nth-of-type(4) figcaption {
-          text-align: right; } }
-  .work--set:nth-of-type(5) {
-    padding-left: 5%;
-    padding-right: 5%; }
-    @media (min-width: 46.25em) {
-      .work--set:nth-of-type(5) {
-        margin: 0 -12.5px;
-        padding: 30px 72px 34px; }
-        .work--set:nth-of-type(5) figure {
-          margin-left: 12.5px;
-          margin-right: 12.5px; }
-        .work--set:nth-of-type(5) figcaption {
-          text-align: right; } }
-  .work--set:nth-of-type(6) figcaption {
-    text-align: center; }
+    .work--set:nth-of-type(1) {
+      margin: 0 -12.5px;
+      padding-bottom: 22px;
+      padding-left: 72px;
+      padding-right: 72px;
+      padding-top: 30px; }
+      .work--set:nth-of-type(1) figure {
+        margin-left: 12.5px;
+        margin-right: 12.5px; } }
+
+.work--set:nth-of-type(2) figcaption {
+  padding-left: 5%;
+  text-align: center; }
+
+@media (min-width: 46.25em) {
+  .work--set:nth-of-type(2) {
+    padding-bottom: 57px; }
+    .work--set:nth-of-type(2) figcaption {
+      padding-right: 72px;
+      text-align: right; } }
+
+.work--set:nth-of-type(3) {
+  padding-left: 5%;
+  padding-right: 5%; }
   @media (min-width: 46.25em) {
-    .work--set:nth-of-type(6) {
+    .work--set:nth-of-type(3) {
+      padding-bottom: 65px;
       padding-left: 158px;
       padding-right: 158px; }
-      .work--set:nth-of-type(6) figcaption {
+      .work--set:nth-of-type(3) figcaption {
         text-align: right; } }
+
+.work--set:nth-of-type(4) {
+  padding-left: 5%;
+  padding-right: 5%; }
+  @media (max-width: 45.25em) {
+    .work--set:nth-of-type(4) figure:nth-of-type(1) {
+      margin-left: -5%;
+      margin-right: -5%; }
+      .work--set:nth-of-type(4) figure:nth-of-type(1) figcaption {
+        text-align: center; } }
+  @media (min-width: 46.25em) {
+    .work--set:nth-of-type(4) {
+      margin: 0 -12.5px;
+      padding: 30px 72px 0; }
+      .work--set:nth-of-type(4) figure {
+        margin-left: 12.5px;
+        margin-right: 12.5px; }
+      .work--set:nth-of-type(4) figcaption {
+        text-align: right; } }
+
+.work--set:nth-of-type(5) {
+  padding-left: 5%;
+  padding-right: 5%; }
+  @media (min-width: 46.25em) {
+    .work--set:nth-of-type(5) {
+      margin: 0 -12.5px;
+      padding: 30px 72px 34px; }
+      .work--set:nth-of-type(5) figure {
+        margin-left: 12.5px;
+        margin-right: 12.5px; }
+      .work--set:nth-of-type(5) figcaption {
+        text-align: right; } }
+
+.work--set:nth-of-type(6) figcaption {
+  text-align: center; }
+
+@media (min-width: 46.25em) {
+  .work--set:nth-of-type(6) {
+    padding-left: 158px;
+    padding-right: 158px; }
+    .work--set:nth-of-type(6) figcaption {
+      text-align: right; } }
 
 .noteworty--collaborators {
   background: #f45701;
@@ -1311,24 +1326,26 @@ blockquote {
   padding-bottom: 0; }
   .noteworty--collaborators .cta--work {
     margin-top: 100px; }
-  .noteworty--collaborators h3 {
+    .noteworty--collaborators .cta--work:hover {
+      background: #252525; }
+  .noteworty--collaborators h4 {
     margin-bottom: 36px;
     text-transform: uppercase;
     text-align: center; }
-    .noteworty--collaborators h3:before {
+    .noteworty--collaborators h4:before {
       content: "ii.";
       color: #252525;
       font-family: "montserrat-light", Arial, sans-serif;
       font-size: 0.75rem;
       padding-right: 20px;
       text-transform: uppercase; }
-    .noteworty--collaborators h3, .noteworty--collaborators h3:before {
+    .noteworty--collaborators h4, .noteworty--collaborators h4:before {
       color: white; }
     @media (min-width: 46.25em) {
-      .noteworty--collaborators h3 {
+      .noteworty--collaborators h4 {
         margin-left: 72px;
         text-align: left; }
-        .noteworty--collaborators h3, .noteworty--collaborators h3:before {
+        .noteworty--collaborators h4, .noteworty--collaborators h4:before {
           color: #252525; } }
   .noteworty--collaborators ul {
     padding-left: 0;

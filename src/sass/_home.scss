@@ -20,7 +20,7 @@ blockquote {
 	background: $color-grey2;
 	display: flex;
 	flex-direction: column;
-	padding: 50px 72px;
+	padding: 50px 72px 0;
 
 	h5 {
 		@include roman-numeral('ii');
@@ -35,6 +35,16 @@ blockquote {
 
 	img {
 		@include full-width();
+
+		@media (min-width: $min-medium) {
+			&.lazyloaded {
+				opacity: .9;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 
 	.featured--projects {

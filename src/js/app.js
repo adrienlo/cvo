@@ -1,8 +1,8 @@
 // import throttle from 'throttle';
 
 window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.loadMode = 1;
-window.lazySizesConfig.expand = 10;
+// window.lazySizesConfig.loadMode = 1;
+// window.lazySizesConfig.expand = 100;
 
 ((window) => {
 	const doc = window.document;
