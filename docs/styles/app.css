@@ -886,11 +886,12 @@ nav.desktop--nav {
         padding-right: 35px; }
 
 footer {
-  padding: 39px 0 0;
+  padding: 10px 0 0;
   text-align: center; }
   footer h4 {
     letter-spacing: .07em;
-    margin-bottom: 50px;
+    margin-bottom: 105px;
+    margin-top: 0;
     text-transform: uppercase; }
   @media (min-width: 46.25em) {
     footer {
@@ -1063,10 +1064,15 @@ blockquote {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 -30px; }
+    margin: 0; }
     .collaborators ul li {
-      width: calc(50% - 60px);
+      box-sizing: border-box;
+      width: calc(50% - 30px);
       padding: 0 30px 64px; }
+      .collaborators ul li:nth-of-type(1n) {
+        padding-left: 0; }
+      .collaborators ul li:nth-of-type(2n) {
+        padding-right: 0; }
       .collaborators ul li img {
         height: auto;
         vertical-align: top;
@@ -1321,7 +1327,9 @@ blockquote {
   background: #f45701;
   color: white;
   text-align: left;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 90px;
+  margin-bottom: 100px; }
   .noteworty--collaborators .cta--work {
     margin-top: 100px; }
     .noteworty--collaborators .cta--work:hover {

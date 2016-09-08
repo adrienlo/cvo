@@ -1,10 +1,11 @@
 footer {
-	padding: 39px 0 0;
+	padding: 10px 0 0;
 	text-align: center;
 
 	h4 {
 		letter-spacing: .07em;
-		margin-bottom: 50px;
+		margin-bottom: 105px;
+		margin-top: 0;
 		text-transform: uppercase;
 	}
 
@@ -43,20 +44,6 @@ footer {
 				align-items: center;
 				display: inline-flex;
 				line-height: normal;
-
-				// &:after {
-				// 	background: $color-grey2;
-				// 	content: '';
-				// 	display: inline-block;
-				// 	height: 140px;
-				// 	margin-left: 55px;
-				// 	transform: rotate(15deg);
-				// 	width: 2px;
-				// }
-				//
-				// &:last-child:after {
-				// 	display: none;
-				// }
 			}
 		}
 	}
