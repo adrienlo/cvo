@@ -360,6 +360,12 @@ th {
   font-style: normal; }
 
 @font-face {
+  font-family: 'montserrat-regular';
+  src: url("fonts/montserrat-regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'montserrat-hairline';
   src: url("fonts/montserrat-hairline.woff2") format("woff2"), url("fonts/montserrat-hairline.woff") format("woff");
   font-weight: normal;
@@ -870,8 +876,12 @@ nav.desktop--nav {
       font-family: "montserrat-light", Arial, sans-serif;
       font-size: 0.9375rem;
       padding: 0; }
+      nav.desktop--nav .nav--links li.active {
+        font-family: "montserrat-regular", Arial, sans-serif;
+        font-weight: bold; }
       nav.desktop--nav .nav--links li:not(:last-child):after {
         content: '&';
+        font-family: "montserrat-light", Arial, sans-serif;
         padding-left: 35px;
         padding-right: 35px; }
 

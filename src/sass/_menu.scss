@@ -179,8 +179,14 @@ nav {
 				font-size: pixel-to-em(15px);
 				padding: 0;
 
+				&.active {
+					font-family: $font-theme-3;
+					font-weight: bold;
+				}
+
 				&:not(:last-child):after {
 					content: '&';
+					font-family: $font-theme-1;
 					padding-left: 35px;
 					padding-right: 35px;
 				}

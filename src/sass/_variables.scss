@@ -7,6 +7,14 @@
 }
 
 @font-face {
+	font-family: 'montserrat-regular';
+	src: url('fonts/montserrat-regular.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
 	font-family: 'montserrat-hairline';
 	src: url('fonts/montserrat-hairline.woff2') format('woff2'),
 		url('fonts/montserrat-hairline.woff') format('woff');
@@ -22,6 +30,7 @@ $color-grey3: #252525;
 // Type
 $font-theme-1: 'montserrat-light', Arial, sans-serif;
 $font-theme-2: 'montserrat-hairline', Arial, sans-serif;
+$font-theme-3: 'montserrat-regular', Arial, sans-serif;
 
 $font-serif: serif;
 $font-sans-serif: $font-theme-1;
