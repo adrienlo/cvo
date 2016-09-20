@@ -500,6 +500,15 @@ body {
     bottom: 0; }
   body .menu--open {
     overflow: hidden; }
+  body.work:before {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute; }
 
 main {
   zoom: 1;
@@ -604,7 +613,7 @@ h3 {
 h4 {
   color: #252525;
   font-family: "montserrat-light", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 1.8;
   letter-spacing: 0.07em; }
@@ -660,7 +669,7 @@ header {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 85px 55px 100px;
+  padding: 36px 25px 100px;
   position: relative; }
   header #cvo--logo {
     width: 156px; }
@@ -703,58 +712,60 @@ header {
       max-width: 125px;
       min-width: 125px; } }
 
-.menu--toggle .menu--toggle--wrapper {
-  background: none;
-  display: inline-block;
-  height: 18px;
-  position: relative;
-  width: 24px; }
-  .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
-    top: 50%;
-    -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-            transform: rotate(0); }
-    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-      background-color: #f45701;
-      border-radius: 0;
-      content: '';
-      display: block;
-      height: 2px;
-      left: 0;
-      position: absolute;
-      transition: all 200ms;
-      width: 24px; }
+.menu--toggle {
+  margin: 0;
+  padding: 0; }
+  .menu--toggle .menu--toggle--wrapper {
+    background: none;
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 24px; }
     .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
-      top: 0; }
-    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-      top: 8px; }
-    .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
-      top: 16px; }
-  .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
-    background: white;
-    -webkit-transform: rotate(135deg);
-        -ms-transform: rotate(135deg);
-            transform: rotate(135deg); }
-    .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
+      top: 50%;
+      -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+              transform: rotate(0); }
+      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after, .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+        background-color: #f45701;
+        border-radius: 0;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transition: all 200ms;
+        width: 24px; }
+      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
+        top: 0; }
+      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+        top: 8px; }
+      .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
+        top: 16px; }
+    .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon {
       background: white;
-      top: 0;
-      -webkit-transform: rotate(-90deg);
-          -ms-transform: rotate(-90deg);
-              transform: rotate(-90deg); }
-    .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
-      top: 0;
-      opacity: 0; }
-
-@media (min-width: 46.25em) {
-  .menu--toggle {
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    position: absolute; } }
+      -webkit-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+              transform: rotate(135deg); }
+      .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:after {
+        background: white;
+        top: 0;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg); }
+      .menu--open .mobile--nav .menu--toggle .menu--toggle--wrapper .menu--toggle--icon:before {
+        top: 0;
+        opacity: 0; }
+  @media (min-width: 46.25em) {
+    .menu--toggle {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      position: absolute; } }
 
 nav .nav--links {
   padding-left: 0;
@@ -876,9 +887,18 @@ nav.desktop--nav {
       font-family: "montserrat-light", Arial, sans-serif;
       font-size: 0.9375rem;
       padding: 0; }
-      nav.desktop--nav .nav--links li.active {
+      .work nav.desktop--nav .nav--links li:first-of-type {
         font-family: "montserrat-regular", Arial, sans-serif;
-        font-weight: bold; }
+        font-weight: bold;
+        position: relative; }
+        .work nav.desktop--nav .nav--links li:first-of-type:before {
+          background: #f45701;
+          content: '';
+          display: block;
+          height: 19px;
+          position: absolute;
+          width: 19px;
+          top: -79px; }
       nav.desktop--nav .nav--links li:not(:last-child):after {
         content: '&';
         font-family: "montserrat-light", Arial, sans-serif;
@@ -950,14 +970,13 @@ footer {
 blockquote {
   color: #252525;
   font-family: "montserrat-hairline", Arial, sans-serif;
-  font-size: 1.875rem;
-  margin: 40px 15% 120px;
+  font-size: 30px;
+  margin: 0 25px 120px;
   text-align: center; }
   @media (min-width: 46.25em) {
     blockquote {
       font-size: 2.6875rem;
-      margin-left: 72px;
-      margin-right: 72px;
+      margin: 40px 72px 120px;
       text-align: left; }
       blockquote:before {
         content: "i.";
@@ -1040,7 +1059,7 @@ blockquote {
 
 .collaborators {
   background: #f5f5f5;
-  padding: 47px 0 150px;
+  padding: 47px 0 0;
   text-align: center; }
   .collaborators h5 {
     color: #252525;
@@ -1224,14 +1243,17 @@ blockquote {
 
 .work--set figure {
   margin: 0;
-  padding-bottom: 3.125rem;
+  padding-bottom: 100px;
   position: relative; }
 
 .work--set figcaption {
   color: #717171;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 21px;
-  padding-top: 20px; }
+  padding-top: 10px; }
+  @media (min-width: 46.25em) {
+    .work--set figcaption {
+      padding-top: 20px; } }
 
 .work--set .work--description {
   font-size: 16px;
@@ -1243,10 +1265,10 @@ blockquote {
   max-width: 1200px; }
 
 .work--set:nth-of-type(1) {
-  margin: 0 -12.5px;
+  margin: 0;
   padding-bottom: 22px;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-left: 36px;
+  padding-right: 36px;
   padding-top: 30px; }
   @media (min-width: 46.25em) {
     .work--set:nth-of-type(1) {
@@ -1257,7 +1279,8 @@ blockquote {
       padding-top: 30px; }
       .work--set:nth-of-type(1) figure {
         margin-left: 12.5px;
-        margin-right: 12.5px; } }
+        margin-right: 12.5px;
+        text-align: right; } }
 
 .work--set:nth-of-type(2) figcaption {
   padding-left: 5%;
@@ -1305,7 +1328,7 @@ blockquote {
   padding-right: 5%; }
   @media (min-width: 46.25em) {
     .work--set:nth-of-type(5) {
-      margin: 0 -12.5px;
+      margin: 0 12.5px;
       padding: 30px 72px 34px; }
       .work--set:nth-of-type(5) figure {
         margin-left: 12.5px;
@@ -1331,9 +1354,14 @@ blockquote {
   padding-top: 90px;
   margin-bottom: 100px; }
   .noteworty--collaborators .cta--work {
+    background: #fff;
+    display: block;
     margin-top: 100px; }
-    .noteworty--collaborators .cta--work:hover {
-      background: #252525; }
+    @media (min-width: 46.25em) {
+      .noteworty--collaborators .cta--work {
+        background: #f5f5f5; }
+        .noteworty--collaborators .cta--work:hover {
+          background: #252525; } }
   .noteworty--collaborators h4 {
     margin-bottom: 36px;
     text-transform: uppercase;
@@ -1359,14 +1387,16 @@ blockquote {
     display: block;
     font-family: "montserrat-hairline", Arial, sans-serif;
     font-size: 1.25rem;
-    margin-left: 20px; }
+    margin-left: 20px;
+    text-align: center; }
     .noteworty--collaborators ul li {
       padding: 0 0 30px 30px;
       width: auto; }
     @media (min-width: 46.25em) {
       .noteworty--collaborators ul {
         font-size: 2.375rem;
-        margin-left: 70px; }
+        margin-left: 70px;
+        text-align: left; }
         .noteworty--collaborators ul li {
           box-sizing: border-box;
           float: left;

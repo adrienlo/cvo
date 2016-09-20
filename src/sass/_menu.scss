@@ -1,5 +1,8 @@
 // Menu inspiration from here: https://jonsuh.com/hamburgers/
 .menu--toggle {
+	margin: 0;
+	padding: 0;
+	
 	.menu--toggle--wrapper {
 		background: none;
 		display: inline-block;
@@ -179,9 +182,22 @@ nav {
 				font-size: pixel-to-em(15px);
 				padding: 0;
 
-				&.active {
-					font-family: $font-theme-3;
-					font-weight: bold;
+				.work & {
+					&:first-of-type {
+						font-family: $font-theme-3;
+						font-weight: bold;
+						position: relative;
+
+						&:before {
+							background: $brand-color;
+							content: '';
+							display: block;
+							height: 19px;
+							position: absolute;
+							width: 19px;
+							top: -79px;
+						}
+					}
 				}
 
 				&:not(:last-child):after {

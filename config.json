@@ -35,5 +35,15 @@
 				]
 			}
 		}
+	},
+	"pageConfig": {
+		"index": {
+			"title": "",
+			"label": ""
+		},
+		"work": {
+			"title": "Work",
+			"label": "work"
+		}
 	}
 }

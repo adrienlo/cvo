@@ -1,14 +1,13 @@
 blockquote {
 	color: $color-grey3;
 	font-family: $font-theme-2;
-	font-size: pixel-to-em(30px);
-	margin: 40px 15% 120px;
+	font-size: 30px;
+	margin: 0 25px 120px;
 	text-align: center;
 
 	@media (min-width: $min-medium) {
 		font-size: pixel-to-em(43px);
-		margin-left: 72px;
-		margin-right: 72px;
+		margin: 40px 72px 120px;
 		text-align: left;
 
 		@include roman-numeral('i');
@@ -82,7 +81,7 @@ blockquote {
 
 .collaborators {
 	background: $color-grey2;
-	padding: 47px 0 150px;
+	padding: 47px 0 0;
 	text-align: center;
 
 	h5 {

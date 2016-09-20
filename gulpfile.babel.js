@@ -36,41 +36,88 @@ function injectPartial(token, fileName) {
 	.on('error', gobbleError)
 }
 
-gulp.task('generate-html', () => {
-	const files = fs.readdirSync(config.source.root);
+function processFile (file) {
+	var folder = path.basename(file, '.html');
+	var {
+		title = '',
+		label = ''
+	} = config.pageConfig[folder] || {};
 
+	if (folder === 'index') {
+		folder = '';
+	}
+
+	gulp.src(`${config.source.root + config.source.partials}master.html`)
+		.pipe(inject(gulp.src(config.source.root + file), {
+			removeTags: true,
+			starttag: '<!-- inject:main:{{ext}} -->',
+			transform: (filePath, fileBuffer) => {
+				return fileBuffer.contents.toString('utf8');
+			}
+		}))
+		.pipe(inject(gulp.src(config.source.root + file), {
+			removeTags: true,
+			starttag: '<!-- inject:title:text -->',
+			transform: () => {
+				return title.length ? ` | ${title}` : '';
+			}
+		}))
+		.pipe(inject(gulp.src(config.source.root + file), {
+			removeTags: true,
+			starttag: '<!-- inject:body:class -->',
+			transform: () => {
+				return (
+					label.length ?
+						`<body class="${label}">` :
+						'<body>'
+				);
+			}
+		}))
+		.pipe(injectPartial('navigation', 'navigation'))
+		.pipe(injectPartial('footer', 'footer'))
+		.pipe(rename('index.html'))
+		.pipe(gulp.dest(config.build.root + folder))
+		.pipe(browser.stream());
+}
+
+gulp.task('generate-html', () => {
+	const pagesPath = config.source.root
+
+	fs.readdirSync(pagesPath)
+		.forEach(file => {
+			fs.lstat(pagesPath + file, (err, stats) => {
+				if (!stats) {
+					return;
+				}
+
+				if (stats.isFile()) {
+					// only care about html files
+					if (path.extname(file) === '.html') {
+						processFile(file);
+					}
+				}
+			});
+		});
+
+	// const files = fs.readdirSync(config.source.root);
+	//
 	// files.forEach(file => {
 	// 	if (path.extname(file) === '.html') {
-	// 		gulp.src(config.source.root + file)
-	// 			.pipe(inject(gulp.src(`${config.source.root + config.source.partials}navigation.html`), {
+	// 		gulp.src(`${config.source.root + config.source.partials}master.html`)
+	// 			.pipe(inject(gulp.src(config.source.root + file), {
 	// 				removeTags: true,
-	// 				starttag: '<!-- inject:navigation:{{ext}} -->',
+	// 				starttag: '<!-- inject:main:{{ext}} -->',
 	// 				transform: (filePath, file) => {
 	// 					return file.contents.toString('utf8');
 	// 				}
 	// 			}))
+	// 			.pipe(injectPartial('navigation', 'navigation'))
+	// 			.pipe(injectPartial('footer', 'footer'))
+	// 			.pipe(rename(file))
 	// 			.pipe(gulp.dest(config.build.root))
 	// 			.pipe(browser.stream());
 	// 	}
 	// });
-
-	files.forEach(file => {
-		if (path.extname(file) === '.html') {
-			gulp.src(`${config.source.root + config.source.partials}master.html`)
-				.pipe(inject(gulp.src(config.source.root + file), {
-					removeTags: true,
-					starttag: '<!-- inject:main:{{ext}} -->',
-					transform: (filePath, file) => {
-						return file.contents.toString('utf8');
-					}
-				}))
-				.pipe(injectPartial('navigation', 'navigation'))
-				.pipe(injectPartial('footer', 'footer'))
-				.pipe(rename(file))
-				.pipe(gulp.dest(config.build.root))
-				.pipe(browser.stream());
-		}
-	});
 });
 
 gulp.task('scripts', () => {

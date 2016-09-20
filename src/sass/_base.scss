@@ -29,6 +29,12 @@ body {
 	.menu--open {
 		overflow: hidden;
 	}
+
+	&.work {
+		&:before {
+			@include visuallyhidden();
+		}
+	}
 }
 
 main {
